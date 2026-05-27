@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose the perfect fermentation plan — Starter, Popular, or Master. Access workshops, recipe library, starter cultures & personalized mentoring.">
+    <title>Pricing | Fermentation Workshop & Pickling Supply Co.</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#B5651D',secondary:'#3B4A3A'}}}}</script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a><a href="workshops.html">Workshops</a><a href="recipes.html">Recipes</a><a href="pricing.html" class="active">Pricing</a><a href="contact.html">Contact</a><a href="student-dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+                <a href="recipes.html" class="btn btn-secondary btn-sm">Browse Recipes</a>
+                <a href="signup.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a><a href="workshops.html">Workshops</a><a href="recipes.html">Recipes</a><a href="pricing.html" class="active">Pricing</a><a href="contact.html">Contact</a><a href="student-dashboard.html">Dashboard</a>
+        <div class="mobile-nav-actions">
+            <div style="display:flex;gap:8px;"><button class="icon-btn dark-toggle"><i class="fa-solid fa-moon"></i></button><button class="icon-btn rtl-toggle"><i class="fa-solid fa-right-left"></i></button></div>
+            <a href="recipes.html" class="btn btn-secondary btn-full">Browse Recipes</a>
+            <a href="signup.html" class="btn btn-primary btn-full">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section style="padding:120px 0 60px;background:linear-gradient(135deg,var(--secondary) 0%,var(--secondary-dark) 100%);color:#fff;text-align:center;">
+        <div class="container">
+            <nav style="font-size:0.85rem;margin-bottom:16px;color:rgba(255,255,255,0.6);">
+                <a href="index.html" style="color:rgba(255,255,255,0.6);">Home</a> / <span style="color:var(--primary-light);">Pricing</span>
+            </nav>
+            <h1 style="font-size:2.6rem;color:#fff;margin-bottom:12px;">Simple, Transparent Pricing</h1>
+            <p style="color:rgba(255,255,255,0.75);max-width:540px;margin:0 auto;">Choose the plan that fits your fermentation goals. No hidden fees, cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="section" id="pricing-cards">
+        <div class="container">
+            <div class="grid-3" style="align-items:start;">
+                <!-- Starter -->
+                <div class="pricing-card animate-on-scroll slide-left" id="plan-starter">
+                    <h3>Starter</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:8px;">Perfect for beginners</p>
+                    <div class="price">$29<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 1 Workshop per month</li>
+                        <li><i class="fa-solid fa-check"></i> 10 Basic recipes</li>
+                        <li><i class="fa-solid fa-check"></i> Fermentation tracker</li>
+                        <li><i class="fa-solid fa-check"></i> Email support</li>
+                        <li><i class="fa-solid fa-check"></i> Community access</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-secondary btn-full" id="plan-starter-btn">Get Started</a>
+                </div>
+                <!-- Popular -->
+                <div class="pricing-card popular animate-on-scroll zoom-in" id="plan-popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro Fermenter</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:8px;">Best value for enthusiasts</p>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> All workshops unlimited</li>
+                        <li><i class="fa-solid fa-check"></i> Full recipe library (50+)</li>
+                        <li><i class="fa-solid fa-check"></i> Premium starter cultures</li>
+                        <li><i class="fa-solid fa-check"></i> Fermentation tracker</li>
+                        <li><i class="fa-solid fa-check"></i> Priority support</li>
+                        <li><i class="fa-solid fa-check"></i> Video replays</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary btn-full" id="plan-popular-btn">Start Pro Plan</a>
+                </div>
+                <!-- Master -->
+                <div class="pricing-card animate-on-scroll slide-right" id="plan-master">
+                    <h3>Master Artisan</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:8px;">For serious fermenters</p>
+                    <div class="price">$99<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+                        <li><i class="fa-solid fa-check"></i> 1-on-1 mentoring sessions</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced projects</li>
+                        <li><i class="fa-solid fa-check"></i> Custom culture kits</li>
+                        <li><i class="fa-solid fa-check"></i> Certificate of completion</li>
+                        <li><i class="fa-solid fa-check"></i> Exclusive masterclasses</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-secondary btn-full" id="plan-master-btn">Go Master</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="section" id="comparison" style="background:var(--warm-white);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Compare Plans</span>
+                <h2>Feature Comparison</h2>
+            </div>
+            <div style="overflow-x:auto;" class="animate-on-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th style="text-align:center;">Starter</th>
+                            <th style="text-align:center;">Pro Fermenter</th>
+                            <th style="text-align:center;">Master Artisan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Workshops per month</td><td style="text-align:center;">1</td><td style="text-align:center;">Unlimited</td><td style="text-align:center;">Unlimited</td></tr>
+                        <tr><td>Recipe access</td><td style="text-align:center;">10 Basic</td><td style="text-align:center;">50+ Full Library</td><td style="text-align:center;">50+ Full Library</td></tr>
+                        <tr><td>Starter cultures</td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                        <tr><td>Fermentation tracker</td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                        <tr><td>Video replays</td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                        <tr><td>1-on-1 mentoring</td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                        <tr><td>Custom culture kits</td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                        <tr><td>Certificate</td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-xmark" style="color:var(--error);"></i></td><td style="text-align:center;"><i class="fa-solid fa-check" style="color:var(--success);"></i></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift a Fermentation Class -->
+    <section class="section animate-on-scroll zoom-in" id="gift-voucher" style="background:var(--cream-dark);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);overflow:hidden;">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:48px;">
+                <div class="animate-on-scroll slide-left">
+                    <span class="section-label">Gift Vouchers</span>
+                    <h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;margin-bottom:16px;">Give the Gift of Living Foods</h2>
+                    <p style="color:var(--text-muted);margin-bottom:20px;line-height:1.6;">Share the joy of sauerkraut, kimchi, and kombucha with your loved ones! Purchase a digital Fermentation Workshop Gift Card that never expires. Available in multiple denominations and immediately delivered via email with a custom rustic design.</p>
+                    <div style="display:flex;gap:12px;margin-bottom:24px;">
+                        <button class="btn btn-secondary btn-sm">$25</button>
+                        <button class="btn btn-primary btn-sm">$50</button>
+                        <button class="btn btn-secondary btn-sm">$75</button>
+                        <button class="btn btn-secondary btn-sm">$100</button>
+                    </div>
+                    <button class="btn btn-primary" id="gift-card-purchase">Buy Gift Card</button>
+                </div>
+                <div class="animate-on-scroll slide-right" style="position:relative;display:flex;justify-content:center;">
+                    <div style="background:var(--warm-white);border:2px dashed var(--primary);border-radius:var(--radius-lg);padding:32px;box-shadow:0 12px 30px var(--shadow-warm);max-width:400px;text-align:center;" class="float-rotate-element">
+                        <svg width="48" height="48" viewBox="0 0 100 100" fill="none" style="margin:0 auto 16px;"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                        <h4 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--secondary);margin-bottom:6px;">Ferment & Pickle Gift Voucher</h4>
+                        <div style="font-size:1.8rem;font-weight:800;color:var(--primary);margin:12px 0;">$50 VALUE</div>
+                        <p style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">Redeemable for any online workshop, cultures starter, or supply kit in the student dashboard.</p>
+                        <div style="border-top:1px dashed var(--border-light);margin-top:18px;padding-top:12px;font-size:0.7rem;color:var(--text-muted);font-family:'Courier New',Courier,monospace;">CODE: FERMENT-GIFT-50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Money Back Guarantee -->
+    <section class="section" id="guarantee" style="text-align:center;">
+        <div class="container animate-on-scroll">
+            <div style="display:inline-flex;align-items:center;gap:16px;background:var(--warm-white);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:28px 40px;box-shadow:0 4px 20px var(--shadow-base);">
+                <div style="width:56px;height:56px;border-radius:50%;background:rgba(107,143,113,0.12);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;"><i class="fa-solid fa-shield-halved"></i></div>
+                <div style="text-align:left;">
+                    <h3 style="font-size:1.15rem;margin-bottom:4px;font-family:'Playfair Display',serif;">30-Day Money-Back Guarantee</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);">Not satisfied? Get a full refund within 30 days — no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3>Ferment & Pickle</h3><p>Your trusted partner in the art of fermentation. We offer expert-led workshops, premium starter cultures, and a thriving community of fermentation enthusiasts.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div></div>
+                <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="recipes.html">Recipe Library</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+                <div class="footer-col"><h3>Resources</h3><ul><li><a href="student-dashboard.html">Student Dashboard</a></li><li><a href="coming-soon.html">Fermentation Blog</a></li><li><a href="coming-soon.html">Community Forum</a></li><li><a href="coming-soon.html">Affiliate Program</a></li><li><a href="404.html">Help Center</a></li></ul></div>
+                <div class="footer-col"><h3>Contact</h3><ul><li><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:8px;"></i> 42 Harvest Lane, Farmville</li><li><i class="fa-solid fa-phone" style="color:var(--primary);margin-right:8px;"></i> +1 (555) 284-7392</li><li><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:8px;"></i> hello@fermentpickle.co</li><li><i class="fa-solid fa-clock" style="color:var(--primary);margin-right:8px;"></i> Mon - Sat: 8am - 6pm</li></ul></div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Fermentation Workshop & Pickling Supply Co. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

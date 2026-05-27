@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Dashboard — Track your fermentation projects, access workshops, browse recipes, and manage your profile.">
+    <title>Student Dashboard | Fermentation Workshop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#B5651D',secondary:'#3B4A3A'}}}}</script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Overlay (mobile) -->
+        <div class="sidebar-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99;"></div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="student-sidebar">
+            <a href="index.html" class="sidebar-logo" id="sidebar-logo">
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+            <nav class="sidebar-nav">
+                <a href="#" data-section="sec-overview" class="active"><i class="fa-solid fa-grid-2"></i> Dashboard</a>
+                <a href="#" data-section="sec-workshops"><i class="fa-solid fa-chalkboard-user"></i> My Workshops</a>
+                <a href="#" data-section="sec-recipes"><i class="fa-solid fa-book-open"></i> Recipe Library</a>
+                <a href="#" data-section="sec-tracker"><i class="fa-solid fa-flask-vial"></i> Fermentation Tracker</a>
+                <a href="#" data-section="sec-shop"><i class="fa-solid fa-store"></i> Starter Cultures Shop</a>
+                <a href="#" data-section="sec-achievements"><i class="fa-solid fa-award"></i> Achievements</a>
+                <a href="#" data-section="sec-profile"><i class="fa-solid fa-user"></i> My Profile</a>
+                <a href="#" data-section="sec-settings"><i class="fa-solid fa-gear"></i> Settings</a>
+                <div class="sidebar-spacer"></div>
+                <button class="logout-btn" onclick="window.location.href='login.html'"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="icon-btn sidebar-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
+                    <h1>Student Dashboard</h1>
+                </div>
+                <div class="topbar-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search workshops, recipes..." id="dash-search">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                    <button class="icon-btn notification-btn" title="Notifications" id="notif-btn">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="dot"></span>
+                    </button>
+                    <div class="topbar-profile" id="profile-trigger">
+                        <div class="avatar">JD</div>
+                        <span>Jane Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dash-content">
+                <!-- ====== SECTION: Overview ====== -->
+                <div class="dash-section active" id="sec-overview">
+                    <div class="welcome-msg">
+                        <h2>Welcome back, Jane! 🫙</h2>
+                        <p>Here's a snapshot of your fermentation journey.</p>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon" style="background:rgba(181,101,29,0.1);color:var(--primary);"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <div class="metric-info"><h3>3</h3><p>Enrolled Workshops</p></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon" style="background:rgba(107,143,113,0.12);color:var(--success);"><i class="fa-solid fa-flask-vial"></i></div>
+                            <div class="metric-info"><h3>5</h3><p>Active Ferments</p></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon" style="background:rgba(212,160,23,0.12);color:var(--warning);"><i class="fa-solid fa-bookmark"></i></div>
+                            <div class="metric-info"><h3>12</h3><p>Saved Recipes</p></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon" style="background:rgba(160,82,45,0.1);color:var(--error);"><i class="fa-solid fa-fire"></i></div>
+                            <div class="metric-info"><h3>7</h3><p>Day Streak</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Workshop -->
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="overview-grid">
+                        <div class="card" style="padding:24px;">
+                            <h3 style="font-size:1.1rem;margin-bottom:16px;"><i class="fa-solid fa-calendar" style="color:var(--primary);margin-right:8px;"></i> Upcoming Workshops</h3>
+                            <div style="display:flex;flex-direction:column;gap:12px;">
+                                <div style="display:flex;align-items:center;gap:14px;padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                    <img src="assets/images/kimchi.png" alt="Kimchi" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:cover;">
+                                    <div style="flex:1;">
+                                        <div style="font-weight:600;font-size:0.9rem;">Kimchi Masterclass</div>
+                                        <div style="font-size:0.78rem;color:var(--text-muted);">June 5, 2026 — 2:00 PM</div>
+                                    </div>
+                                    <span class="badge badge-warning">Upcoming</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:14px;padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                    <img src="assets/images/kombucha.png" alt="Kombucha" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:cover;">
+                                    <div style="flex:1;">
+                                        <div style="font-weight:600;font-size:0.9rem;">Kombucha Brewing</div>
+                                        <div style="font-size:0.78rem;color:var(--text-muted);">June 12, 2026 — 10:00 AM</div>
+                                    </div>
+                                    <span class="badge badge-primary">Enrolled</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="padding:24px;">
+                            <h3 style="font-size:1.1rem;margin-bottom:16px;"><i class="fa-solid fa-flask-vial" style="color:var(--success);margin-right:8px;"></i> Active Fermentation Timers</h3>
+                            <div style="display:flex;flex-direction:column;gap:12px;">
+                                <div style="padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                                        <span style="font-weight:600;font-size:0.9rem;">Sauerkraut Batch #3</span>
+                                        <span class="badge badge-success">Day 8/14</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:57%;height:100%;background:var(--success);border-radius:4px;transition:width 0.5s;"></div>
+                                    </div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">pH: 3.8 · Temp: 68°F</div>
+                                </div>
+                                <div style="padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                                        <span style="font-weight:600;font-size:0.9rem;">Kimchi Batch #1</span>
+                                        <span class="badge badge-warning">Day 3/5</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:60%;height:100%;background:var(--warning);border-radius:4px;"></div>
+                                    </div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">pH: 4.2 · Temp: 70°F</div>
+                                </div>
+                                <div style="padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                                        <span style="font-weight:600;font-size:0.9rem;">Kombucha Batch #2</span>
+                                        <span class="badge badge-primary">Day 15/21</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:71%;height:100%;background:var(--primary);border-radius:4px;"></div>
+                                    </div>
+                                    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">pH: 3.2 · Temp: 72°F</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Recipes -->
+                    <div class="card" style="padding:24px;margin-top:24px;">
+                        <h3 style="font-size:1.1rem;margin-bottom:16px;"><i class="fa-solid fa-book-open" style="color:var(--warning);margin-right:8px;"></i> Recently Viewed Recipes</h3>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" class="recent-recipes-grid">
+                            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                <img src="assets/images/sauerkraut.png" alt="Sauerkraut" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+                                <div><div style="font-weight:600;font-size:0.85rem;">Classic Sauerkraut</div><div style="font-size:0.75rem;color:var(--text-muted);">30min prep · 14 days</div></div>
+                            </div>
+                            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                <img src="assets/images/kombucha.png" alt="Kombucha" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+                                <div><div style="font-weight:600;font-size:0.85rem;">Ginger Kombucha</div><div style="font-size:0.75rem;color:var(--text-muted);">20min prep · 21 days</div></div>
+                            </div>
+                            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--cream);border-radius:var(--radius-md);">
+                                <img src="assets/images/hot-sauce.png" alt="Hot Sauce" style="width:48px;height:48px;border-radius:8px;object-fit:cover;">
+                                <div><div style="font-weight:600;font-size:0.85rem;">Habanero Fire Sauce</div><div style="font-size:0.75rem;color:var(--text-muted);">45min prep · 10 days</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: My Workshops ====== -->
+                <div class="dash-section" id="sec-workshops">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">My Workshops</h2>
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+                        <div class="card" style="padding:20px;display:flex;gap:20px;align-items:center;" class="workshop-row">
+                            <img src="assets/images/sauerkraut.png" alt="Sauerkraut" style="width:80px;height:80px;border-radius:var(--radius-md);object-fit:cover;flex-shrink:0;">
+                            <div style="flex:1;">
+                                <h3 style="font-size:1.05rem;">Sauerkraut Essentials</h3>
+                                <p style="font-size:0.85rem;color:var(--text-muted);margin:4px 0 8px;">Completed on May 15, 2026</p>
+                                <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                    <div style="width:100%;height:100%;background:var(--success);border-radius:4px;"></div>
+                                </div>
+                            </div>
+                            <span class="badge badge-success">Completed</span>
+                        </div>
+                        <div class="card" style="padding:20px;display:flex;gap:20px;align-items:center;">
+                            <img src="assets/images/kimchi.png" alt="Kimchi" style="width:80px;height:80px;border-radius:var(--radius-md);object-fit:cover;flex-shrink:0;">
+                            <div style="flex:1;">
+                                <h3 style="font-size:1.05rem;">Kimchi Masterclass</h3>
+                                <p style="font-size:0.85rem;color:var(--text-muted);margin:4px 0 8px;">In progress — 2 of 4 lessons completed</p>
+                                <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                    <div style="width:50%;height:100%;background:var(--warning);border-radius:4px;"></div>
+                                </div>
+                            </div>
+                            <span class="badge badge-warning">In Progress</span>
+                        </div>
+                        <div class="card" style="padding:20px;display:flex;gap:20px;align-items:center;">
+                            <img src="assets/images/kombucha.png" alt="Kombucha" style="width:80px;height:80px;border-radius:var(--radius-md);object-fit:cover;flex-shrink:0;">
+                            <div style="flex:1;">
+                                <h3 style="font-size:1.05rem;">Kombucha Brewing</h3>
+                                <p style="font-size:0.85rem;color:var(--text-muted);margin:4px 0 8px;">Not started — Starts June 12, 2026</p>
+                                <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                    <div style="width:0%;height:100%;background:var(--primary);border-radius:4px;"></div>
+                                </div>
+                            </div>
+                            <span class="badge badge-primary">Enrolled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: Recipe Library ====== -->
+                <div class="dash-section" id="sec-recipes">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">Saved Recipes</h2>
+                    <div class="grid-3" style="gap:16px;">
+                        <div class="card" style="padding:16px;"><img src="assets/images/sauerkraut.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Classic Sauerkraut</h3><p style="font-size:0.8rem;color:var(--text-muted);">Easy · 14 days</p></div>
+                        <div class="card" style="padding:16px;"><img src="assets/images/kimchi.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Traditional Napa Kimchi</h3><p style="font-size:0.8rem;color:var(--text-muted);">Medium · 5 days</p></div>
+                        <div class="card" style="padding:16px;"><img src="assets/images/kombucha.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Ginger Lemon Kombucha</h3><p style="font-size:0.8rem;color:var(--text-muted);">Advanced · 21 days</p></div>
+                        <div class="card" style="padding:16px;"><img src="assets/images/pickles.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Garlic Dill Pickles</h3><p style="font-size:0.8rem;color:var(--text-muted);">Easy · 7 days</p></div>
+                        <div class="card" style="padding:16px;"><img src="assets/images/hot-sauce.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Habanero Fire Sauce</h3><p style="font-size:0.8rem;color:var(--text-muted);">Advanced · 10 days</p></div>
+                        <div class="card" style="padding:16px;"><img src="assets/images/sourdough.png" alt="" class="card-img" style="height:140px;"><h3 style="font-size:0.95rem;margin-top:8px;">Sourdough Starter</h3><p style="font-size:0.8rem;color:var(--text-muted);">Easy · 7 days</p></div>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: Fermentation Tracker ====== -->
+                <div class="dash-section" id="sec-tracker">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">Fermentation Tracker</h2>
+                    <div style="display:flex;justify-content:flex-end;margin-bottom:16px;">
+                        <button class="btn btn-primary btn-sm" id="add-ferment-btn"><i class="fa-solid fa-plus"></i> New Ferment</button>
+                    </div>
+                    <div style="overflow-x:auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Project</th><th>Type</th><th>Start Date</th><th>Day</th><th>pH</th><th>Temp</th><th>Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Sauerkraut Batch #3</td><td>Sauerkraut</td><td>May 20, 2026</td><td>8 / 14</td><td>3.8</td><td>68°F</td><td><span class="badge badge-success">Active</span></td></tr>
+                                <tr><td>Kimchi Batch #1</td><td>Kimchi</td><td>May 25, 2026</td><td>3 / 5</td><td>4.2</td><td>70°F</td><td><span class="badge badge-warning">Active</span></td></tr>
+                                <tr><td>Kombucha Batch #2</td><td>Kombucha</td><td>May 13, 2026</td><td>15 / 21</td><td>3.2</td><td>72°F</td><td><span class="badge badge-primary">Active</span></td></tr>
+                                <tr><td>Dill Pickles Batch #2</td><td>Pickles</td><td>May 10, 2026</td><td>7 / 7</td><td>3.5</td><td>67°F</td><td><span class="badge badge-success">Complete</span></td></tr>
+                                <tr><td>Hot Sauce Batch #1</td><td>Hot Sauce</td><td>May 18, 2026</td><td>10 / 10</td><td>3.4</td><td>71°F</td><td><span class="badge badge-success">Complete</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: Starter Cultures Shop ====== -->
+                <div class="dash-section" id="sec-shop">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">Starter Cultures Shop</h2>
+                    <div class="grid-3" style="gap:16px;">
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(181,101,29,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-bacterium"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">SCOBY Culture</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Organic kombucha SCOBY with starter liquid. Ready to brew.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$14.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(107,143,113,0.12);color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-wheat-awn"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">Kefir Grains</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Live water kefir grains for probiotic fermented beverages.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$12.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(212,160,23,0.12);color:var(--warning);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-bread-slice"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">Sourdough Starter</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">50-year-old heritage sourdough starter. Active and ready to use.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$9.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(160,82,45,0.1);color:var(--error);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-pepper-hot"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">Hot Sauce Starter</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Lacto-fermentation brine starter for artisan hot sauce making.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$8.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(181,101,29,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-jar"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">Fermentation Kit</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Complete kit: mason jar, weight, airlock lid, and salt. All you need.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$24.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                        <div class="card" style="text-align:center;padding:24px;">
+                            <div style="width:64px;height:64px;border-radius:50%;background:rgba(107,143,113,0.12);color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;"><i class="fa-solid fa-vial"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;">pH Testing Strips</h3>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">100 strips for accurate pH monitoring during fermentation.</p>
+                            <div style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;">$6.99</div>
+                            <button class="btn btn-primary btn-sm btn-full">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: Achievements ====== -->
+                <div class="dash-section" id="sec-achievements">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">My Achievements</h2>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Complete workshops and successfully log batches in the Fermentation Tracker to unlock custom badges!</p>
+                    <div class="grid-3" style="gap:16px;">
+                        <div class="card animate-on-scroll slide-left" style="text-align:center;padding:24px;border:2px solid var(--primary);">
+                            <div style="width:72px;height:72px;background:rgba(181,101,29,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:2rem;color:var(--primary);" class="float-element"><i class="fa-solid fa-award"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Kraut King</h3>
+                            <span class="badge badge-primary">Unlocked</span>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;">Successfully fermented sauerkraut for 14 days and logged a pH of 3.5.</p>
+                        </div>
+                        <div class="card animate-on-scroll zoom-in delay-100" style="text-align:center;padding:24px;border:2px solid var(--success);">
+                            <div style="width:72px;height:72px;background:rgba(107,143,113,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:2rem;color:var(--success);" class="float-element"><i class="fa-solid fa-jar"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Kimchi Master</h3>
+                            <span class="badge badge-success">Unlocked</span>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;">Completed the premium 4-hour Kimchi Masterclass and aged first batch.</p>
+                        </div>
+                        <div class="card animate-on-scroll slide-right delay-200" style="text-align:center;padding:24px;opacity:0.6;border:1px dashed var(--border-light);">
+                            <div style="width:72px;height:72px;background:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:2rem;color:var(--text-muted);"><i class="fa-solid fa-lock"></i></div>
+                            <h3 style="font-size:1.05rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Sourdough Sage</h3>
+                            <span class="badge" style="background:var(--border-light);color:var(--text-muted);">Locked</span>
+                            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;">Bake 5 loaves of sourdough bread using wild-yeast starter. (0/5 logged)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: My Profile ====== -->
+                <div class="dash-section" id="sec-profile">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">My Profile</h2>
+                    <div class="card" style="padding:32px;max-width:600px;">
+                        <div style="display:flex;align-items:center;gap:20px;margin-bottom:28px;">
+                            <div class="avatar" style="width:72px;height:72px;font-size:1.5rem;">JD</div>
+                            <div>
+                                <h3 style="font-size:1.2rem;">Jane Doe</h3>
+                                <p style="font-size:0.85rem;color:var(--text-muted);">Pro Fermenter Plan · Joined May 2026</p>
+                            </div>
+                        </div>
+                        <form onsubmit="event.preventDefault();alert('Profile updated!');">
+                            <div class="form-group"><label for="prof-first">First Name</label><input type="text" id="prof-first" class="form-input" value="Jane"></div>
+                            <div class="form-group"><label for="prof-last">Last Name</label><input type="text" id="prof-last" class="form-input" value="Doe"></div>
+                            <div class="form-group"><label for="prof-email">Email</label><input type="email" id="prof-email" class="form-input" value="jane.doe@example.com"></div>
+                            <div class="form-group"><label for="prof-phone">Phone</label><input type="tel" id="prof-phone" class="form-input" value="+1 (555) 123-4567"></div>
+                            <div class="form-group"><label for="prof-bio">Bio</label><textarea id="prof-bio" class="form-input" rows="3" style="resize:vertical;">Passionate fermenter exploring sauerkraut, kimchi, and kombucha. Love experimenting with new flavors!</textarea></div>
+                            <button type="submit" class="btn btn-primary" id="save-profile">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ====== SECTION: Settings ====== -->
+                <div class="dash-section" id="sec-settings">
+                    <h2 style="font-size:1.4rem;margin-bottom:20px;">Settings</h2>
+                    <div class="card" style="padding:28px;max-width:600px;">
+                        <h3 style="font-size:1.05rem;margin-bottom:16px;"><i class="fa-solid fa-palette" style="color:var(--primary);margin-right:8px;"></i> Appearance</h3>
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-light);">
+                            <span>Dark Mode</span>
+                            <button class="icon-btn dark-toggle"><i class="fa-solid fa-moon"></i></button>
+                        </div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-light);">
+                            <span>RTL Layout</span>
+                            <button class="icon-btn rtl-toggle"><i class="fa-solid fa-right-left"></i></button>
+                        </div>
+
+                        <h3 style="font-size:1.05rem;margin:24px 0 16px;"><i class="fa-solid fa-bell" style="color:var(--warning);margin-right:8px;"></i> Notifications</h3>
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-light);">
+                            <span>Email Notifications</span>
+                            <input type="checkbox" checked style="accent-color:var(--primary);width:18px;height:18px;">
+                        </div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-light);">
+                            <span>Workshop Reminders</span>
+                            <input type="checkbox" checked style="accent-color:var(--primary);width:18px;height:18px;">
+                        </div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-light);">
+                            <span>Fermentation Alerts</span>
+                            <input type="checkbox" checked style="accent-color:var(--primary);width:18px;height:18px;">
+                        </div>
+
+                        <h3 style="font-size:1.05rem;margin:24px 0 16px;"><i class="fa-solid fa-globe" style="color:var(--success);margin-right:8px;"></i> Language</h3>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <select class="form-input" id="lang-select">
+                                <option>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>German</option>
+                                <option>Korean</option>
+                                <option>Japanese</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <style>
+        .sidebar-overlay.active { display: block !important; }
+        @media (max-width: 768px) {
+            .overview-grid { grid-template-columns: 1fr !important; }
+            .recent-recipes-grid { grid-template-columns: 1fr !important; }
+            .card[style*="display:flex;gap:20px"] { flex-direction: column; }
+        }
+    </style>
+</body>
+</html>

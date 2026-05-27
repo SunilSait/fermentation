@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coming Soon — We're brewing something special. Stay tuned for exciting new features at Fermentation Workshop.">
+    <title>Coming Soon | Fermentation Workshop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#B5651D',secondary:'#3B4A3A'}}}}</script>
+</head>
+<body>
+    <!-- Dynamic rising bubbles in the background -->
+    <div class="bubbles-container" data-bubble-count="16"></div>
+
+    <div class="utility-page" id="page-coming-soon" style="position:relative; z-index:2;">
+        <!-- Top-right icons -->
+        <div class="auth-top-icons">
+            <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        </div>
+
+        <div class="utility-content">
+            <!-- Logo -->
+            <a href="index.html" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:32px;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:var(--text-dark);" id="logo-coming-soon">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+
+            <!-- Fermentation Timer Illustration -->
+            <div style="margin-bottom:24px;">
+                <svg width="160" height="160" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto;animation:float 3s ease-in-out infinite;">
+                    <!-- Jar -->
+                    <rect x="50" y="32" width="100" height="14" rx="4" fill="#B5651D" opacity="0.5"/>
+                    <rect x="58" y="24" width="84" height="12" rx="4" fill="#B5651D" opacity="0.7"/>
+                    <rect x="42" y="46" width="116" height="140" rx="16" fill="#B5651D" opacity="0.1" stroke="#B5651D" stroke-width="3"/>
+                    <!-- Bubbles (fermenting!) -->
+                    <circle cx="75" cy="120" r="6" fill="#6B8F71" opacity="0.35">
+                        <animate attributeName="cy" values="120;80;120" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.35;0.1;0.35" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="100" cy="130" r="8" fill="#6B8F71" opacity="0.3">
+                        <animate attributeName="cy" values="130;70;130" dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0.08;0.3" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="125" cy="115" r="5" fill="#6B8F71" opacity="0.4">
+                        <animate attributeName="cy" values="115;75;115" dur="3.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="88" cy="140" r="4" fill="#6B8F71" opacity="0.3">
+                        <animate attributeName="cy" values="140;90;140" dur="2.8s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0.05;0.3" dur="2.8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="112" cy="145" r="7" fill="#6B8F71" opacity="0.25">
+                        <animate attributeName="cy" values="145;85;145" dur="4.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.25;0.08;0.25" dur="4.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Brine line -->
+                    <rect x="52" y="100" width="96" height="76" rx="12" fill="#B5651D" opacity="0.08"/>
+                    <!-- Timer circle -->
+                    <circle cx="100" cy="76" r="18" fill="none" stroke="#B5651D" stroke-width="3" opacity="0.4"/>
+                    <line x1="100" y1="76" x2="100" y2="64" stroke="#B5651D" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+                        <animateTransform attributeName="transform" type="rotate" from="0 100 76" to="360 100 76" dur="8s" repeatCount="indefinite"/>
+                    </line>
+                    <circle cx="100" cy="76" r="3" fill="#B5651D" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <h1 style="font-size:3.2rem;color:var(--primary);">Coming Soon</h1>
+            <h2>We're Brewing Something Special</h2>
+            <p>This feature is currently fermenting and will be ready soon. Leave your email to be the first to know when it launches!</p>
+
+            <!-- Email Signup -->
+            <div style="display:flex;gap:10px;max-width:400px;margin:0 auto 24px;">
+                <input type="email" placeholder="Enter your email" class="form-input" style="flex:1;" id="coming-soon-email">
+                <button class="btn btn-primary" id="coming-soon-notify" onclick="alert('Thank you! We\'ll notify you when this feature is ready.')">Notify Me</button>
+            </div>
+
+            <a href="index.html" class="btn btn-secondary" id="btn-back-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

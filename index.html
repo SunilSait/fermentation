@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fermentation Workshop & Pickling Supply Co. — Enroll in sauerkraut, kimchi & kombucha classes. Access our recipe library, purchase starter cultures, and master the art of fermentation.">
+    <title>Fermentation Workshop | Master the Art of Fermentation</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#B5651D', secondary: '#3B4A3A' } } }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="nav-logo" id="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="student-dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn dark-toggle" id="dark-toggle-desktop" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button class="icon-btn rtl-toggle" id="rtl-toggle-desktop" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+                <a href="recipes.html" class="btn btn-secondary btn-sm" id="nav-cta-secondary">Browse Recipes</a>
+                <a href="signup.html" class="btn btn-primary btn-sm" id="nav-cta-primary">Enroll Now</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="student-dashboard.html">Dashboard</a>
+        <div class="mobile-nav-actions">
+            <div style="display:flex;gap:8px;">
+                <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+            </div>
+            <a href="recipes.html" class="btn btn-secondary btn-full">Browse Recipes</a>
+            <a href="signup.html" class="btn btn-primary btn-full">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-bg">
+            <img src="assets/images/hero-fermentation.png" alt="Rustic fermentation jars on farmhouse table">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="section-label" style="color:#D4A017;">🫙 Fermentation Workshop & Pickling Supply Co.</span>
+            <h1>Master the Ancient Art of Fermentation</h1>
+            <p>Join our hands-on workshops to learn sauerkraut, kimchi, kombucha, and more. Access 50+ recipes, purchase premium starter cultures, and track your fermentation projects.</p>
+            <div class="hero-btns">
+                <a href="signup.html" class="btn btn-primary btn-lg" id="hero-cta-primary">Start Your Journey</a>
+                <a href="workshops.html" class="btn btn-secondary btn-lg" id="hero-cta-secondary">Explore Workshops</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features-section" style="background:var(--warm-white);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">What We Offer</span>
+                <h2>Discover Our Signature Workshops</h2>
+                <p>From traditional sauerkraut to fizzy kombucha, explore our curated fermentation classes taught by expert artisans.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card animate-on-scroll slide-left" id="feature-sauerkraut">
+                    <img src="assets/images/sauerkraut.png" alt="Homemade sauerkraut in jar" class="card-img shake-hover">
+                    <span class="badge badge-primary">Beginner Friendly</span>
+                    <h3 style="margin-top:12px;">Sauerkraut Essentials</h3>
+                    <p>Learn the timeless German tradition of fermenting cabbage. Master salt ratios, packing techniques, and flavor variations.</p>
+                    <a href="workshops.html" class="btn btn-secondary btn-sm" style="margin-top:16px;">Learn More</a>
+                </div>
+                <div class="card animate-on-scroll zoom-in delay-100" id="feature-kimchi">
+                    <img src="assets/images/kimchi.png" alt="Traditional Korean kimchi" class="card-img shake-hover">
+                    <span class="badge badge-warning">Most Popular</span>
+                    <h3 style="margin-top:12px;">Kimchi Masterclass</h3>
+                    <p>Dive into Korean fermentation with authentic kimchi recipes. From napa cabbage to radish, create bold flavors at home.</p>
+                    <a href="workshops.html" class="btn btn-secondary btn-sm" style="margin-top:16px;">Learn More</a>
+                </div>
+                <div class="card animate-on-scroll slide-right delay-200" id="feature-kombucha">
+                    <img src="assets/images/kombucha.png" alt="Kombucha with SCOBY" class="card-img shake-hover">
+                    <span class="badge badge-success">Advanced</span>
+                    <h3 style="margin-top:12px;">Kombucha Brewing</h3>
+                    <p>Brew your own probiotic kombucha tea. Learn SCOBY care, first and second fermentation, and flavoring techniques.</p>
+                    <a href="workshops.html" class="btn btn-secondary btn-sm" style="margin-top:16px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmhouse Heritage Section -->
+    <section class="section" id="heritage-section" style="background:var(--cream-dark);overflow:hidden;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:48px;">
+                <div class="animate-on-scroll slide-left">
+                    <span class="section-label">Our Farmhouse Roots</span>
+                    <h2>A Return to Slow Food & Pure Living</h2>
+                    <p style="margin-bottom:20px;">At Ferment & Pickle, we believe in honoring time-tested traditions. In an era of instant gratification, fermentation is a beautiful act of patience—a quiet collaboration between nature and the kitchen.</p>
+                    <p style="margin-bottom:24px;">Our workshops teach you not just the recipes, but the biological art of nurturing beneficial wild microbes. Using local, organic, and hand-selected vegetables, you will craft delicious, living foods rich in history and probiotics.</p>
+                    <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px;">
+                        <div style="width:48px;height:48px;border-radius:50%;background:rgba(181, 101, 29, 0.12);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;"><i class="fa-solid fa-leaf"></i></div>
+                        <div>
+                            <h4 style="font-size:0.95rem;font-weight:700;">100% Organic & Local</h4>
+                            <p style="font-size:0.85rem;color:var(--text-muted);">Sourced from family-run biodynamic farms.</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:16px;align-items:center;">
+                        <div style="width:48px;height:48px;border-radius:50%;background:rgba(107, 143, 113, 0.12);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;"><i class="fa-solid fa-droplet"></i></div>
+                        <div>
+                            <h4 style="font-size:0.95rem;font-weight:700;">Naturally Probiotic</h4>
+                            <p style="font-size:0.85rem;color:var(--text-muted);">Unpasteurized, rich in gut-healthy enzymes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll slide-right" style="position:relative;display:flex;justify-content:center;">
+                    <img src="assets/images/workshop-class.png" alt="People cutting vegetables in farmhouse kitchen" style="border-radius:var(--radius-xl);box-shadow:0 12px 30px var(--shadow-warm);border:4px solid var(--warm-white);max-height:420px;object-fit:cover;" class="float-rotate-element">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">How It Works</span>
+                <h2>Your Fermentation Journey in 4 Steps</h2>
+                <p>From enrollment to your first successful batch, we guide you every step of the way.</p>
+            </div>
+            <div class="timeline animate-on-scroll zoom-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-on-scroll slide-left">
+                        <h3>1. Enroll in a Workshop</h3>
+                        <p>Choose from our range of workshops — sauerkraut, kimchi, kombucha, pickles, hot sauce, and more. Pick your schedule and sign up.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-on-scroll slide-right">
+                        <h3>2. Learn from Experts</h3>
+                        <p>Join live, hands-on sessions led by experienced fermenters. Access our video library, recipe cards, and troubleshooting guides.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-on-scroll slide-left">
+                        <h3>3. Ferment at Home</h3>
+                        <p>Use our starter cultures and kits to begin fermenting. Track your projects with our fermentation timeline tool in your dashboard.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-on-scroll slide-right">
+                        <h3>4. Share & Grow</h3>
+                        <p>Join our community of fermenters. Share your creations, get feedback, and advance to master-level techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Showcase -->
+    <section class="section" id="stats-section" style="background:linear-gradient(rgba(59,74,58,0.92), rgba(59,74,58,0.92)), url('assets/images/hero-premium.png') center/cover fixed;color:#fff;padding:80px 0;">
+        <div class="container">
+            <div class="grid-4" style="text-align:center;">
+                <div class="animate-on-scroll zoom-in">
+                    <div style="font-size:2.8rem;font-family:'Playfair Display',serif;font-weight:800;color:var(--primary-light);" data-count="1500" data-suffix="+">0</div>
+                    <h3 style="color:#fff;font-size:1rem;margin-top:8px;font-family:'Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Jars Fermented</h3>
+                </div>
+                <div class="animate-on-scroll zoom-in delay-100">
+                    <div style="font-size:2.8rem;font-family:'Playfair Display',serif;font-weight:800;color:var(--primary-light);" data-count="500" data-suffix="+">0</div>
+                    <h3 style="color:#fff;font-size:1rem;margin-top:8px;font-family:'Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Happy Students</h3>
+                </div>
+                <div class="animate-on-scroll zoom-in delay-200">
+                    <div style="font-size:2.8rem;font-family:'Playfair Display',serif;font-weight:800;color:var(--primary-light);" data-count="50" data-suffix="+">0</div>
+                    <h3 style="color:#fff;font-size:1rem;margin-top:8px;font-family:'Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Pro Recipes</h3>
+                </div>
+                <div class="animate-on-scroll zoom-in delay-300">
+                    <div style="font-size:2.8rem;font-family:'Playfair Display',serif;font-weight:800;color:var(--primary-light);" data-count="99" data-suffix="%">0</div>
+                    <h3 style="color:#fff;font-size:1rem;margin-top:8px;font-family:'Inter',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:1px;">Success Rate</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials-section" style="background:var(--warm-white);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">What Students Say</span>
+                <h2>Trusted by 500+ Fermenting Enthusiasts</h2>
+                <p>Hear from our graduates who've transformed their kitchens into fermentation labs.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card animate-on-scroll slide-left" id="testimonial-1" style="text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;font-weight:700;">SR</div>
+                    <p style="font-style:italic;margin-bottom:14px;">"The kimchi workshop changed my life! I now make 10 jars a month and share with my neighbors. The instructors are incredibly knowledgeable."</p>
+                    <h3 style="font-size:1rem;">Sarah Reynolds</h3>
+                    <span style="font-size:0.8rem;color:var(--text-muted);">Kimchi Masterclass Graduate</span>
+                    <div style="margin-top:10px;color:var(--warning);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll zoom-in delay-100" id="testimonial-2" style="text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;font-weight:700;">MJ</div>
+                    <p style="font-style:italic;margin-bottom:14px;">"I was terrified of kombucha SCOBYs before this workshop. Now I have 3 continuous brews running and I've saved hundreds of dollars!"</p>
+                    <h3 style="font-size:1rem;">Marcus Johnson</h3>
+                    <span style="font-size:0.8rem;color:var(--text-muted);">Kombucha Brewing Student</span>
+                    <div style="margin-top:10px;color:var(--warning);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll slide-right delay-200" id="testimonial-3" style="text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:50%;background:var(--success);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;font-weight:700;">EP</div>
+                    <p style="font-style:italic;margin-bottom:14px;">"The fermentation tracker in the dashboard is genius. It notifies me when my sauerkraut is ready and logs my pH readings perfectly."</p>
+                    <h3 style="font-size:1rem;">Elena Petrova</h3>
+                    <span style="font-size:0.8rem;color:var(--text-muted);">Sauerkraut Essentials Graduate</span>
+                    <div style="margin-top:10px;color:var(--warning);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section animate-on-scroll zoom-in" id="partners-section" style="background:var(--cream);padding:48px 0;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+        <div class="container">
+            <h4 style="text-align:center;font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-muted);margin-bottom:24px;">Supporting Our Local Community Partners</h4>
+            <div style="display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:32px;opacity:0.75;">
+                <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--secondary);"><i class="fa-solid fa-seedling" style="margin-right:6px;color:var(--success);"></i> Harvest Co-Op</span>
+                <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--secondary);"><i class="fa-solid fa-wheat-awn" style="margin-right:6px;color:var(--primary);"></i> Meadow Farms</span>
+                <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--secondary);"><i class="fa-solid fa-cow" style="margin-right:6px;color:var(--primary-light);"></i> Organic Dairy Inc</span>
+                <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--secondary);"><i class="fa-solid fa-apple-whole" style="margin-right:6px;color:var(--error);"></i> Green Groves</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section" id="cta-section" style="background:linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);color:#fff;text-align:center;">
+        <div class="container animate-on-scroll">
+            <span class="section-label" style="color:var(--primary-light);">Ready to Get Started?</span>
+            <h2 style="color:#fff;font-size:2.4rem;margin-bottom:12px;">Start Your Fermentation Journey Today</h2>
+            <p style="color:rgba(255,255,255,0.8);max-width:540px;margin:0 auto 32px;font-size:1.05rem;">Join 500+ students who have already mastered the art of fermentation. Your first batch is just a workshop away.</p>
+            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                <a href="signup.html" class="btn btn-primary btn-lg" id="cta-enroll">Enroll Now — It's Easy</a>
+                <a href="pricing.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.4);" id="cta-pricing">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ferment & Pickle</h3>
+                    <p>Your trusted partner in the art of fermentation. We offer expert-led workshops, premium starter cultures, and a thriving community of fermentation enthusiasts.</p>
+                    <div class="footer-social">
+                        <a href="#" id="social-facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" id="social-instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" id="social-youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" id="social-pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="recipes.html">Recipe Library</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                        <li><a href="coming-soon.html">Fermentation Blog</a></li>
+                        <li><a href="coming-soon.html">Community Forum</a></li>
+                        <li><a href="coming-soon.html">Affiliate Program</a></li>
+                        <li><a href="404.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:8px;"></i> 42 Harvest Lane, Farmville</li>
+                        <li><i class="fa-solid fa-phone" style="color:var(--primary);margin-right:8px;"></i> +1 (555) 284-7392</li>
+                        <li><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:8px;"></i> hello@fermentpickle.co</li>
+                        <li><i class="fa-solid fa-clock" style="color:var(--primary);margin-right:8px;"></i> Mon - Sat: 8am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Fermentation Workshop & Pickling Supply Co. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

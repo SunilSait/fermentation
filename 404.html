@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found — The page you're looking for doesn't exist or has been moved.">
+    <title>404 — Page Not Found | Fermentation Workshop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#B5651D',secondary:'#3B4A3A'}}}}</script>
+</head>
+<body>
+    <div class="utility-page" id="page-404">
+        <!-- Top-right icons -->
+        <div class="auth-top-icons">
+            <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        </div>
+
+        <div class="utility-content">
+            <!-- Logo -->
+            <a href="index.html" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:32px;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:var(--text-dark);" id="logo-404">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+
+            <!-- Broken Jar Illustration -->
+            <div style="margin-bottom:24px;">
+                <svg width="160" height="160" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto;animation:float 3s ease-in-out infinite;">
+                    <!-- Jar body -->
+                    <rect x="50" y="35" width="100" height="16" rx="4" fill="#B5651D" opacity="0.5"/>
+                    <rect x="58" y="27" width="84" height="12" rx="4" fill="#B5651D" opacity="0.7"/>
+                    <!-- Main jar with crack -->
+                    <rect x="42" y="51" width="116" height="140" rx="16" fill="#B5651D" opacity="0.1" stroke="#B5651D" stroke-width="3"/>
+                    <!-- Crack lines -->
+                    <path d="M100 51 L95 85 L108 100 L92 125 L105 155" stroke="#B5651D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                    <path d="M95 85 L80 95" stroke="#B5651D" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+                    <path d="M108 100 L125 108" stroke="#B5651D" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+                    <!-- Leaked drops -->
+                    <circle cx="70" cy="175" r="5" fill="#6B8F71" opacity="0.4"/>
+                    <circle cx="85" cy="182" r="4" fill="#6B8F71" opacity="0.3"/>
+                    <circle cx="130" cy="178" r="6" fill="#6B8F71" opacity="0.35"/>
+                    <!-- Sad face -->
+                    <circle cx="80" cy="105" r="4" fill="#B5651D" opacity="0.5"/>
+                    <circle cx="120" cy="105" r="4" fill="#B5651D" opacity="0.5"/>
+                    <path d="M85 135 Q100 125 115 135" stroke="#B5651D" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+                </svg>
+            </div>
+
+            <h1 style="font-size:4.5rem;font-family:'Playfair Display',serif;font-weight:800;color:var(--primary);line-height:1.1;">404</h1>
+            <h2 style="font-size:1.8rem;margin:8px 0 12px;">Oops! This Batch Got Lost</h2>
+            <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:24px;max-width:380px;margin-left:auto;margin-right:auto;">The page you're looking for doesn't exist or has been moved. Maybe it's still fermenting somewhere?</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="index.html" class="btn btn-primary" id="btn-go-home"><i class="fa-solid fa-house"></i> Go Home</a>
+                <a href="workshops.html" class="btn btn-secondary" id="btn-browse-workshops">Browse Workshops</a>
+            </div>
+
+            <!-- Suggested Links -->
+            <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border-light);max-width:320px;margin-left:auto;margin-right:auto;">
+                <p style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;font-weight:600;">Suggested Links</p>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9rem;text-align:center;">
+                    <a href="recipes.html" style="color:var(--primary);font-weight:600;"><i class="fa-solid fa-book-open" style="margin-right:6px;"></i> Browse Pro Recipes</a>
+                    <a href="pricing.html" style="color:var(--primary);font-weight:600;"><i class="fa-solid fa-tag" style="margin-right:6px;color:var(--success);"></i> View Pricing Plans</a>
+                    <a href="contact.html" style="color:var(--primary);font-weight:600;"><i class="fa-solid fa-envelope" style="margin-right:6px;color:var(--warning);"></i> Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

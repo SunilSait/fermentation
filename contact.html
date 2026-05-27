@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Fermentation Workshop & Pickling Supply Co. We'd love to hear from you about workshops, recipes, or partnerships.">
+    <title>Contact Us | Fermentation Workshop & Pickling Supply Co.</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='28' y='8' width='44' height='8' rx='2' fill='%23B5651D' opacity='0.7'/%3E%3Crect x='32' y='4' width='36' height='6' rx='2' fill='%23B5651D'/%3E%3Crect x='25' y='16' width='50' height='80' rx='8' fill='%23B5651D' opacity='0.15' stroke='%23B5651D' stroke-width='2.5'/%3E%3Crect x='30' y='50' width='40' height='36' rx='3' fill='%23B5651D' opacity='0.25'/%3E%3Ccircle cx='42' cy='62' r='4' fill='%236B8F71' opacity='0.6'/%3E%3Ccircle cx='55' cy='58' r='3' fill='%236B8F71' opacity='0.5'/%3E%3Ccircle cx='48' cy='72' r='3.5' fill='%236B8F71' opacity='0.55'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#B5651D',secondary:'#3B4A3A'}}}}</script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
+                Ferment & Pickle
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a><a href="workshops.html">Workshops</a><a href="recipes.html">Recipes</a><a href="pricing.html">Pricing</a><a href="contact.html" class="active">Contact</a><a href="student-dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+                <a href="recipes.html" class="btn btn-secondary btn-sm">Browse Recipes</a>
+                <a href="signup.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a><a href="workshops.html">Workshops</a><a href="recipes.html">Recipes</a><a href="pricing.html">Pricing</a><a href="contact.html" class="active">Contact</a><a href="student-dashboard.html">Dashboard</a>
+        <div class="mobile-nav-actions">
+            <div style="display:flex;gap:8px;"><button class="icon-btn dark-toggle"><i class="fa-solid fa-moon"></i></button><button class="icon-btn rtl-toggle"><i class="fa-solid fa-right-left"></i></button></div>
+            <a href="recipes.html" class="btn btn-secondary btn-full">Browse Recipes</a>
+            <a href="signup.html" class="btn btn-primary btn-full">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section style="padding:120px 0 60px;background:linear-gradient(135deg,var(--secondary) 0%,var(--secondary-dark) 100%);color:#fff;text-align:center;">
+        <div class="container">
+            <nav style="font-size:0.85rem;margin-bottom:16px;color:rgba(255,255,255,0.6);">
+                <a href="index.html" style="color:rgba(255,255,255,0.6);">Home</a> / <span style="color:var(--primary-light);">Contact</span>
+            </nav>
+            <h1 style="font-size:2.6rem;color:#fff;margin-bottom:12px;">Get in Touch</h1>
+            <p style="color:rgba(255,255,255,0.75);max-width:540px;margin:0 auto;">Have questions about workshops, recipes, or partnerships? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Cards -->
+    <section class="section" id="contact-info" style="background:var(--warm-white);">
+        <div class="container">
+            <div class="grid-3">
+                <div class="card animate-on-scroll slide-left" style="text-align:center;padding:32px 24px;" id="contact-email">
+                    <div style="width:56px;height:56px;border-radius:50%;background:rgba(181,101,29,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;"><i class="fa-solid fa-envelope"></i></div>
+                    <h3 style="font-size:1.1rem;margin-bottom:6px;">Email Us</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);">hello@fermentpickle.co</p>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">We reply within 24 hours</p>
+                </div>
+                <div class="card animate-on-scroll zoom-in delay-100" style="text-align:center;padding:32px 24px;" id="contact-phone">
+                    <div style="width:56px;height:56px;border-radius:50%;background:rgba(107,143,113,0.12);color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;"><i class="fa-solid fa-phone"></i></div>
+                    <h3 style="font-size:1.1rem;margin-bottom:6px;">Call Us</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);">+1 (555) 284-7392</p>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Mon - Sat: 8am - 6pm</p>
+                </div>
+                <div class="card animate-on-scroll slide-right delay-200" style="text-align:center;padding:32px 24px;" id="contact-location">
+                    <div style="width:56px;height:56px;border-radius:50%;background:rgba(212,160,23,0.12);color:var(--warning);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3 style="font-size:1.1rem;margin-bottom:6px;">Visit Us</h3>
+                    <p style="font-size:0.9rem;color:var(--text-muted);">42 Harvest Lane, Farmville</p>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Walk-ins welcome</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="section" id="contact-form-section">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;" id="contact-grid">
+                <div class="animate-on-scroll slide-left">
+                    <h2 style="font-size:1.8rem;margin-bottom:8px;">Send Us a Message</h2>
+                    <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.95rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <form id="contact-form" onsubmit="event.preventDefault();alert('Thank you! Your message has been sent.');">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-input" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email-input">Email Address</label>
+                            <input type="email" id="contact-email-input" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-input" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-input" rows="5" placeholder="Tell us more..." required style="resize:vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="animate-on-scroll slide-right">
+                    <div style="width:100%;height:100%;min-height:400px;background:var(--cream-dark);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;border:1px solid var(--border-light);">
+                        <div style="text-align:center;color:var(--text-muted);">
+                            <i class="fa-solid fa-map-location-dot" style="font-size:3rem;color:var(--primary);margin-bottom:16px;display:block;" class="float-element"></i>
+                            <h3 style="font-size:1.15rem;margin-bottom:6px;color:var(--text-dark);font-family:'Playfair Display',serif;">Our Workshop Studio</h3>
+                            <p style="font-size:0.9rem;">42 Harvest Lane<br>Farmville, VT 05001</p>
+                            <p style="font-size:0.85rem;margin-top:8px;">📍 Located in the historic Old Mill District</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmhouse Pick-up Hours -->
+    <section class="section animate-on-scroll zoom-in" id="pickup-hours" style="background:var(--cream-dark);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);overflow:hidden;">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:48px;">
+                <div class="animate-on-scroll slide-left">
+                    <span class="section-label">Visit Our Farmhouse</span>
+                    <h2>Supply Shop & Starter Pick-up Hours</h2>
+                    <p style="color:var(--text-muted);margin-bottom:20px;line-height:1.6;">Our physical supply shop in Farmville is open for workshop material pick-ups, purchasing starter cultures (SCOBY, kefir, sourdough), and browsing our selection of handmade crock vessels. Drop by during our open hours to speak with an artisan in person.</p>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <span class="badge badge-success">Now Open</span>
+                        <span style="font-size:0.85rem;color:var(--text-muted);">Safe local curb-side pickup available.</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll slide-right">
+                    <div style="background:var(--warm-white);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:24px;box-shadow:0 12px 30px var(--shadow-base);">
+                        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+                            <tbody>
+                                <tr style="border-bottom:1px solid var(--border-light);"><td style="padding:12px 0;font-weight:600;">Monday - Friday</td><td style="padding:12px 0;text-align:right;color:var(--text-muted);">8:00 AM - 6:00 PM</td></tr>
+                                <tr style="border-bottom:1px solid var(--border-light);"><td style="padding:12px 0;font-weight:600;">Saturday</td><td style="padding:12px 0;text-align:right;color:var(--text-muted);">9:00 AM - 5:00 PM</td></tr>
+                                <tr style="border-bottom:1px solid var(--border-light);"><td style="padding:12px 0;font-weight:600;">Sunday</td><td style="padding:12px 0;text-align:right;color:var(--primary);font-weight:600;">Closed (Microbes Resting!)</td></tr>
+                                <tr><td style="padding:12px 0;font-weight:600;">Cultures Restocking</td><td style="padding:12px 0;text-align:right;color:var(--success);font-weight:600;">Every Wednesday morning</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="contact-faq" style="background:var(--warm-white);">
+
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" style="max-width:720px;margin:0 auto;">
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header"><span>Do I need prior fermentation experience?</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-body"><div class="accordion-body-inner">Not at all! Our beginner workshops are designed for complete newcomers. We provide all materials and step-by-step guidance.</div></div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header"><span>What materials do I need for workshops?</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-body"><div class="accordion-body-inner">We provide all materials including jars, cultures, and ingredients. Just bring yourself and an apron! For online workshops, a starter kit is shipped to you beforehand.</div></div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header"><span>Can I switch plans at any time?</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-body"><div class="accordion-body-inner">Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.</div></div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header"><span>Are the workshops in-person or online?</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-body"><div class="accordion-body-inner">We offer both! In-person workshops are held at our Farmville studio. Online workshops are live via video with full interaction. All plans include video replays.</div></div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header"><span>Do you ship starter cultures internationally?</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-body"><div class="accordion-body-inner">Currently we ship within the US and Canada. International shipping is coming soon — sign up for our newsletter to be notified when it's available.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3>Ferment & Pickle</h3><p>Your trusted partner in the art of fermentation. We offer expert-led workshops, premium starter cultures, and a thriving community of fermentation enthusiasts.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div></div>
+                <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="recipes.html">Recipe Library</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+                <div class="footer-col"><h3>Resources</h3><ul><li><a href="student-dashboard.html">Student Dashboard</a></li><li><a href="coming-soon.html">Fermentation Blog</a></li><li><a href="coming-soon.html">Community Forum</a></li><li><a href="coming-soon.html">Affiliate Program</a></li><li><a href="404.html">Help Center</a></li></ul></div>
+                <div class="footer-col"><h3>Contact</h3><ul><li><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:8px;"></i> 42 Harvest Lane, Farmville</li><li><i class="fa-solid fa-phone" style="color:var(--primary);margin-right:8px;"></i> +1 (555) 284-7392</li><li><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:8px;"></i> hello@fermentpickle.co</li><li><i class="fa-solid fa-clock" style="color:var(--primary);margin-right:8px;"></i> Mon - Sat: 8am - 6pm</li></ul></div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Fermentation Workshop & Pickling Supply Co. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <style>
+        @media (max-width: 768px) { #contact-grid { grid-template-columns: 1fr !important; } }
+    </style>
+</body>
+</html>
