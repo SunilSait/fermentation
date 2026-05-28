@@ -189,10 +189,80 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ====== SECTION: My Workshops ====== -->
-                <div class="dash-section" id="sec-workshops">
+                    <!-- Microbial Analytics Hub -->
+                    <div class="card" style="padding:28px;margin-top:24px;">
+                        <h3 style="font-size:1.2rem;margin-bottom:20px;display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-chart-line" style="color:var(--primary);"></i> Personal Ferment & Microbial Analytics Hub</h3>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="analytics-hub-grid">
+                            <!-- Col 1: Bio-Activity -->
+                            <div style="display:flex;flex-direction:column;gap:16px;padding:16px;background:var(--cream);border-radius:var(--radius-md);">
+                                <h4 style="font-size:0.95rem;font-weight:700;color:var(--secondary);margin-bottom:4px;"><i class="fa-solid fa-dna" style="margin-right:6px;"></i> Active Cultures Activity</h4>
+                                <div>
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:0.8rem;font-weight:500;">
+                                        <span>Lactobacilli Colonization</span>
+                                        <span style="color:var(--success);font-weight:700;">92% Active</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:92%;height:100%;background:var(--success);border-radius:4px;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:0.8rem;font-weight:500;">
+                                        <span>Yeast Activity Level</span>
+                                        <span style="color:var(--warning);font-weight:700;">76% Active</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:76%;height:100%;background:var(--warning);border-radius:4px;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:0.8rem;font-weight:500;">
+                                        <span>Cell Div. Rate (10^9 CFU/ml)</span>
+                                        <span style="color:var(--primary);font-weight:700;">84% Stable</span>
+                                    </div>
+                                    <div style="width:100%;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden;">
+                                        <div style="width:84%;height:100%;background:var(--primary);border-radius:4px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Col 2: Metric Gauges -->
+                            <div style="display:flex;flex-direction:column;gap:14px;padding:16px;background:var(--cream);border-radius:var(--radius-md);">
+                                <h4 style="font-size:0.95rem;font-weight:700;color:var(--secondary);margin-bottom:4px;"><i class="fa-solid fa-circle-nodes" style="margin-right:6px;"></i> Live Jar Conditions</h4>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                    <div style="padding:10px;background:var(--warm-white);border:1px solid var(--border-light);border-radius:var(--radius-sm);text-align:center;">
+                                        <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">pH Level</div>
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--success);">3.6 pH</div>
+                                        <span class="badge badge-success" style="font-size:0.6rem;padding:2px 6px;">Safe Shield</span>
+                                    </div>
+                                    <div style="padding:10px;background:var(--warm-white);border:1px solid var(--border-light);border-radius:var(--radius-sm);text-align:center;">
+                                        <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Temperature</div>
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--primary);">69.5°F</div>
+                                        <span class="badge badge-primary" style="font-size:0.6rem;padding:2px 6px;">Optimal</span>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px;background:var(--warm-white);border:1px solid var(--border-light);border-radius:var(--radius-sm);font-size:0.8rem;">
+                                    <span style="color:var(--text-muted);"><i class="fa-solid fa-weight-scale" style="color:var(--warning);margin-right:6px;"></i> Brine Salinity:</span>
+                                    <span style="font-weight:700;color:var(--secondary);">2.1% (Standard)</span>
+                                </div>
+                            </div>
+                            <!-- Col 3: Bio-Safety Log (full width) -->
+                            <div style="display:flex;flex-direction:column;gap:12px;padding:16px;background:var(--cream);border-radius:var(--radius-md);grid-column:1 / -1;">
+                                <h4 style="font-size:0.95rem;font-weight:700;color:var(--secondary);margin-bottom:4px;"><i class="fa-solid fa-clipboard-list" style="margin-right:6px;"></i> Seasonal Pickling Log</h4>
+                                <div style="padding:8px 12px;background:var(--warm-white);border-left:4px solid var(--primary);border-radius:var(--radius-sm);font-size:0.78rem;line-height:1.45;">
+                                    <strong style="color:var(--primary);display:block;margin-bottom:2px;"><i class="fa-solid fa-temperature-arrow-up"></i> Summer Temperature Alert</strong>
+                                    Ambient temps average 74°F today. Shorten Sourdough fermentations by 2 hours and Kraut check by 3 days.
+                                </div>
+                                <div style="padding:8px 12px;background:var(--warm-white);border-left:4px solid var(--success);border-radius:var(--radius-sm);font-size:0.78rem;line-height:1.45;">
+                                    <strong style="color:var(--success);display:block;margin-bottom:2px;"><i class="fa-solid fa-leaf"></i> Pro Tannin Tip</strong>
+                                    Add 1 clean grape leaf or oak leaf per quart jar. Natural vegetable tannins keep pickles crunchy at high heat!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- ====== SECTION: My Workshops ====== -->
+            <div class="dash-section" id="sec-workshops">
                     <h2 style="font-size:1.4rem;margin-bottom:20px;">My Workshops</h2>
                     <div style="display:flex;flex-direction:column;gap:16px;">
                         <div class="card" style="padding:20px;display:flex;gap:20px;align-items:center;" class="workshop-row">
@@ -415,7 +485,12 @@
         @media (max-width: 768px) {
             .overview-grid { grid-template-columns: 1fr !important; }
             .recent-recipes-grid { grid-template-columns: 1fr !important; }
+            .analytics-hub-grid { grid-template-columns: 1fr !important; }
+            .analytics-hub-grid > div { grid-column: auto !important; }
             .card[style*="display:flex;gap:20px"] { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+            .analytics-hub-grid div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
         }
     </style>
 </body>

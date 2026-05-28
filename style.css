@@ -1661,6 +1661,8 @@ input, textarea, select, button {
     .hero h1 { font-size: 2.8rem; }
     .section { padding: 60px 0; }
     .section-header h2 { font-size: 1.9rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
     .metrics-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1693,6 +1695,7 @@ input, textarea, select, button {
     .grid-4 > *:last-child:nth-child(odd) {
         grid-column: 1 / span 2 !important;
         max-width: calc(50% - 12px) !important;
+        width: 100% !important;
         margin: 0 auto !important;
     }
 }

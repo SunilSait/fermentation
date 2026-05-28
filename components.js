@@ -338,6 +338,7 @@
                 .grid-4 > *:last-child:nth-child(odd) {
                     grid-column: 1 / span 2 !important;
                     max-width: calc(50% - 12px) !important;
+                    width: 100% !important;
                     margin: 0 auto !important;
                 }
             }
