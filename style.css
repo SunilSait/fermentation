@@ -52,6 +52,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: clip;
 }
 
 body {
@@ -122,8 +123,8 @@ input, textarea, select, button {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto !important;
+    padding: 0 32px !important;
 }
 
 /* ---- Buttons ---- */
@@ -163,8 +164,8 @@ input, textarea, select, button {
 }
 
 .dark .btn-secondary {
-    color: var(--cream-dark);
-    border-color: var(--cream-dark);
+    color: var(--text-dark);
+    border-color: var(--text-dark);
 }
 
 .btn-secondary:hover {
@@ -554,6 +555,7 @@ input, textarea, select, button {
 /* ---- Section Styles ---- */
 .section {
     padding: 80px 0;
+    overflow: hidden;
 }
 
 .section-header {
@@ -591,6 +593,9 @@ input, textarea, select, button {
     border-radius: var(--radius-lg);
     padding: 28px;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
@@ -601,7 +606,8 @@ input, textarea, select, button {
 
 .card-img {
     width: 100%;
-    height: 200px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: var(--radius-md);
     margin-bottom: 18px;
@@ -616,6 +622,7 @@ input, textarea, select, button {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.6;
+    margin-bottom: 16px;
 }
 
 /* ---- Badge ---- */
@@ -755,7 +762,7 @@ input, textarea, select, button {
 }
 
 .dark .auth-logo {
-    color: var(--cream-dark);
+    color: var(--text-dark);
 }
 
 .auth-logo svg {
@@ -952,6 +959,7 @@ input, textarea, select, button {
     background: var(--cream);
     min-height: 100vh;
     transition: var(--transition);
+    min-width: 0;
 }
 
 .topbar {
@@ -1211,6 +1219,13 @@ input, textarea, select, button {
     text-align: center;
     transition: var(--transition);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing-card .btn {
+    margin-top: auto !important;
 }
 
 .pricing-card:hover {
@@ -1572,7 +1587,8 @@ input, textarea, select, button {
 
 .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+    transform: none !important;
+    will-change: auto !important;
 }
 
 .animate-on-scroll.slide-left {
@@ -1672,12 +1688,25 @@ input, textarea, select, button {
     [dir="rtl"] .timeline-dot { left: auto; right: 20px; transform: translateX(50%); }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-3 > *:last-child:nth-child(odd),
+    .grid-4 > *:last-child:nth-child(odd) {
+        grid-column: 1 / span 2 !important;
+        max-width: calc(50% - 12px) !important;
+        margin: 0 auto !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .nav-actions .btn { display: none; }
     .hamburger { display: flex; }
 
-    .hero { min-height: 80vh; }
+    .hero {
+        min-height: auto !important;
+        padding-top: 100px !important;
+        padding-bottom: 64px !important;
+    }
     .hero h1 { font-size: 2.2rem; }
     .hero p { font-size: 1rem; }
 
@@ -1723,6 +1752,58 @@ input, textarea, select, button {
     }
     .topbar-profile span {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-top-icons {
+        top: 12px;
+        right: 12px;
+    }
+    [dir="rtl"] .auth-top-icons {
+        right: auto;
+        left: 12px;
+    }
+    .auth-page, .utility-page {
+        align-items: flex-start !important;
+        padding-top: 64px !important;
+    }
+    .auth-card {
+        margin-top: 20px !important;
+        padding: 32px 20px !important;
+    }
+    .utility-content {
+        padding-top: 24px !important;
+    }
+    .auth-logo, #logo-coming-soon, #logo-404 {
+        font-size: 1.15rem !important;
+    }
+    .topbar {
+        padding: 12px 10px !important;
+        gap: 8px !important;
+    }
+    .topbar-left h1 {
+        font-size: 1.1rem !important;
+    }
+    .topbar-left {
+        gap: 8px !important;
+    }
+    .topbar-actions {
+        gap: 6px !important;
+    }
+    .topbar-actions .icon-btn {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    .topbar-profile {
+        gap: 4px !important;
+    }
+    .dash-content {
+        padding: 16px 12px !important;
+    }
+    .overview-grid, .admin-overview-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
     }
 }
 

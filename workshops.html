@@ -15,49 +15,13 @@
             theme: { extend: { colors: { primary: '#B5651D', secondary: '#3B4A3A' } } }
         }
     </script>
+    <!-- Shared Components Script -->
+    <script src="components.js" defer></script>
 </head>
-<body>
+<body class="bg-amber-50/20 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container navbar-inner">
-            <a href="index.html" class="nav-logo">
-                <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/><rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/><rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/><rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/><circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/><circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/><circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/></svg>
-                Ferment & Pickle
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="workshops.html" class="active">Workshops</a>
-                <a href="recipes.html">Recipes</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
-                <a href="student-dashboard.html">Dashboard</a>
-            </div>
-            <div class="nav-actions">
-                <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
-                <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
-                <a href="recipes.html" class="btn btn-secondary btn-sm">Browse Recipes</a>
-                <a href="signup.html" class="btn btn-primary btn-sm">Enroll Now</a>
-            </div>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-        </div>
-    </nav>
-    <div class="mobile-nav" id="mobile-nav">
-        <a href="index.html">Home</a>
-        <a href="workshops.html" class="active">Workshops</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="student-dashboard.html">Dashboard</a>
-        <div class="mobile-nav-actions">
-            <div style="display:flex;gap:8px;">
-                <button class="icon-btn dark-toggle" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
-                <button class="icon-btn rtl-toggle" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
-            </div>
-            <a href="recipes.html" class="btn btn-secondary btn-full">Browse Recipes</a>
-            <a href="signup.html" class="btn btn-primary btn-full">Enroll Now</a>
-        </div>
-    </div>
+    <!-- Shared Navbar Container -->
+    <div id="navbar-container"></div>
 
     <!-- Page Hero -->
     <section style="padding:120px 0 60px;background:linear-gradient(135deg,var(--secondary) 0%,var(--secondary-dark) 100%);color:#fff;text-align:center;">
@@ -75,7 +39,7 @@
         <div class="container">
             <div class="grid-3">
                 <div class="card animate-on-scroll" id="workshop-sauerkraut">
-                    <img src="assets/images/sauerkraut.png" alt="Sauerkraut Basics" class="card-img" style="height:200px;">
+                    <img src="assets/images/sauerkraut.png" alt="Sauerkraut Basics" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-success">Beginner</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 3 Hours</span>
@@ -88,7 +52,7 @@
                     </div>
                 </div>
                 <div class="card animate-on-scroll" id="workshop-kimchi">
-                    <img src="assets/images/kimchi.png" alt="Kimchi Masterclass" class="card-img" style="height:200px;">
+                    <img src="assets/images/kimchi.png" alt="Kimchi Masterclass" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-warning">Intermediate</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 4 Hours</span>
@@ -101,7 +65,7 @@
                     </div>
                 </div>
                 <div class="card animate-on-scroll" id="workshop-kombucha">
-                    <img src="assets/images/kombucha.png" alt="Kombucha Brewing" class="card-img" style="height:200px;">
+                    <img src="assets/images/kombucha.png" alt="Kombucha Brewing" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-error">Advanced</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 5 Hours</span>
@@ -114,7 +78,7 @@
                     </div>
                 </div>
                 <div class="card animate-on-scroll" id="workshop-pickles">
-                    <img src="assets/images/pickles.png" alt="Advanced Pickling" class="card-img" style="height:200px;">
+                    <img src="assets/images/pickles.png" alt="Advanced Pickling" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-warning">Intermediate</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 3.5 Hours</span>
@@ -127,7 +91,7 @@
                     </div>
                 </div>
                 <div class="card animate-on-scroll" id="workshop-hotsauce">
-                    <img src="assets/images/hot-sauce.png" alt="Fermented Hot Sauce" class="card-img" style="height:200px;">
+                    <img src="assets/images/hot-sauce.png" alt="Fermented Hot Sauce" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-warning">Intermediate</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 3 Hours</span>
@@ -140,7 +104,7 @@
                     </div>
                 </div>
                 <div class="card animate-on-scroll" id="workshop-sourdough">
-                    <img src="assets/images/sourdough.png" alt="Sourdough Starter" class="card-img" style="height:200px;">
+                    <img src="assets/images/sourdough.png" alt="Sourdough Starter" class="card-img">
                     <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
                         <span class="badge badge-success">Beginner</span>
                         <span style="font-size:0.8rem;color:var(--text-muted);"><i class="fa-regular fa-clock"></i> 4 Hours</span>
@@ -317,53 +281,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Ferment & Pickle</h3>
-                    <p>Your trusted partner in the art of fermentation. We offer expert-led workshops, premium starter cultures, and a thriving community of fermentation enthusiasts.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="workshops.html">Workshops</a></li>
-                        <li><a href="recipes.html">Recipe Library</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="student-dashboard.html">Student Dashboard</a></li>
-                        <li><a href="coming-soon.html">Fermentation Blog</a></li>
-                        <li><a href="coming-soon.html">Community Forum</a></li>
-                        <li><a href="coming-soon.html">Affiliate Program</a></li>
-                        <li><a href="404.html">Help Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:8px;"></i> 42 Harvest Lane, Farmville</li>
-                        <li><i class="fa-solid fa-phone" style="color:var(--primary);margin-right:8px;"></i> +1 (555) 284-7392</li>
-                        <li><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:8px;"></i> hello@fermentpickle.co</li>
-                        <li><i class="fa-solid fa-clock" style="color:var(--primary);margin-right:8px;"></i> Mon - Sat: 8am - 6pm</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; 2026 Fermentation Workshop & Pickling Supply Co. All rights reserved.</div>
-        </div>
-    </footer>
+    <!-- Shared Footer Container -->
+    <div id="footer-container"></div>
 
     <script src="script.js"></script>
 </body>
