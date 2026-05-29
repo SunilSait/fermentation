@@ -33,16 +33,16 @@
     ];
 
     const MASON_JAR_SVG = `<svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-500 group-hover:rotate-12">
-        <rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/>
-        <rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/>
-        <rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/>
-        <rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/>
-        <circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/>
-        <circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/>
-        <circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/>
-        <circle cx="38" cy="78" r="2.5" fill="#6B8F71" opacity="0.4"/>
-        <circle cx="58" cy="70" r="3" fill="#6B8F71" opacity="0.45"/>
-        <path d="M35 46 Q50 38 65 46" stroke="#B5651D" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <rect x="28" y="8" width="44" height="8" rx="2" fill="var(--logo-primary)" opacity="0.7"/>
+        <rect x="32" y="4" width="36" height="6" rx="2" fill="var(--logo-primary)"/>
+        <rect x="25" y="16" width="50" height="80" rx="8" fill="var(--logo-glass-fill)" stroke="var(--logo-primary)" stroke-width="2.5"/>
+        <rect x="30" y="50" width="40" height="36" rx="3" fill="var(--logo-label-fill)"/>
+        <circle cx="42" cy="62" r="4" fill="var(--logo-liquid-fill)" opacity="0.6"/>
+        <circle cx="55" cy="58" r="3" fill="var(--logo-liquid-fill)" opacity="0.5"/>
+        <circle cx="48" cy="72" r="3.5" fill="var(--logo-liquid-fill)" opacity="0.55"/>
+        <circle cx="38" cy="78" r="2.5" fill="var(--logo-liquid-fill)" opacity="0.4"/>
+        <circle cx="58" cy="70" r="3" fill="var(--logo-liquid-fill)" opacity="0.45"/>
+        <path d="M35 46 Q50 38 65 46" stroke="var(--logo-primary)" stroke-width="1.5" fill="none" opacity="0.5"/>
     </svg>`;
 
     // --- Get current page filename ---
@@ -131,8 +131,8 @@
                     <!-- Right Side Actions -->
                     <div class="flex items-center gap-2 xl:gap-2.5">
                         <!-- RTL Toggle -->
-                        <button id="dir-toggle" class="js-dir-toggle hidden xl:flex w-12 h-10 items-center justify-center rounded-xl bg-amber-100/40 dark:bg-neutral-800 border border-amber-200/50 dark:border-neutral-700 hover:border-amber-500/50 hover:bg-amber-50 dark:hover:bg-neutral-700 transition-all shadow-sm group" aria-label="Toggle text direction">
-                            <span class="text-[10px] font-black text-neutral-700 dark:text-neutral-400 group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors uppercase">LTR</span>
+                        <button id="dir-toggle" class="js-dir-toggle hidden xl:flex w-10 h-10 items-center justify-center rounded-xl bg-amber-100/40 dark:bg-neutral-800 border border-amber-200/50 dark:border-neutral-700 hover:border-amber-500/50 hover:bg-amber-50 dark:hover:bg-neutral-700 transition-all shadow-sm group" aria-label="Toggle text direction">
+                            <i class="fas fa-exchange-alt text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors"></i>
                         </button>
 
                         <!-- Theme Toggle -->
@@ -208,7 +208,7 @@
                             ${MASON_JAR_SVG}
                             <span class="font-bold text-xl tracking-tight text-neutral-900 dark:text-amber-100" style="font-family: 'Playfair Display', serif;">${BRAND_NAME}</span>
                         </a>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-450 leading-relaxed">
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                             ${BRAND_TAGLINE}. Discover the science-backed, living world of home pickling and probiotic-rich ferments.
                         </p>
                         <div class="flex gap-3">
@@ -242,7 +242,7 @@
 
                     <!-- Newsletter -->
                     <div class="bg-amber-100/30 dark:bg-neutral-900/50 p-6 rounded-2xl border border-amber-200/40 dark:border-neutral-800 transition-all hover:shadow-lg">
-                        <h4 class="font-bold mb-2 text-neutral-900 dark:text-white">Stay Cultured 🫙</h4>
+                        <h4 class="font-bold mb-2 text-neutral-900 dark:text-white">Stay Cultured </h4>
                         <p class="text-xs text-neutral-500 dark:text-neutral-400 mb-4">Subscribe for fermentation tips, microbial facts, and new recipes.</p>
                         <form id="newsletter-form" class="space-y-2">
                             <input type="email" required placeholder="Enter your email" 
@@ -258,13 +258,13 @@
                 <!-- Bottom Bar -->
                 <div class="border-t border-amber-100 dark:border-neutral-850 pt-8 pb-4">
                     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p class="text-[11px] uppercase tracking-[0.2em] text-neutral-450 dark:text-neutral-400">
+                        <p class="text-[11px] uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
                             &copy; ${CURRENT_YEAR} ${BRAND_NAME}. <span class="mx-1">|</span> Nurtured with 💚 & microbes.
                         </p>
                         <div class="flex items-center gap-6">
-                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-450 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Privacy</a>
-                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-450 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Terms</a>
-                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-450 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">${PHONE}</a>
+                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Privacy</a>
+                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">Terms</a>
+                            <a href="#" class="text-[10px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-500 transition-colors">${PHONE}</a>
                         </div>
                     </div>
                 </div>
@@ -470,8 +470,6 @@
                 const span = btn.querySelector('span');
                 if (span) {
                     span.textContent = dir === 'rtl' ? 'RTL' : 'LTR';
-                } else {
-                    btn.textContent = dir.toUpperCase();
                 }
             });
         };

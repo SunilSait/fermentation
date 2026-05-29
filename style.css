@@ -29,6 +29,12 @@
     --radius-lg: 16px;
     --radius-xl: 24px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Logo Variables */
+    --logo-primary: #B5651D;
+    --logo-glass-fill: rgba(181, 101, 29, 0.15);
+    --logo-label-fill: rgba(181, 101, 29, 0.25);
+    --logo-liquid-fill: #6B8F71;
 }
 
 .dark {
@@ -40,6 +46,12 @@
     --border-light: #3A3A3A;
     --shadow-warm: rgba(181, 101, 29, 0.15);
     --shadow-base: rgba(0, 0, 0, 0.3);
+    
+    /* Logo Variables */
+    --logo-primary: #F59E0B;
+    --logo-glass-fill: rgba(245, 158, 11, 0.18);
+    --logo-label-fill: rgba(245, 158, 11, 0.3);
+    --logo-liquid-fill: #81C784;
 }
 
 /* ---- Reset & Base ---- */

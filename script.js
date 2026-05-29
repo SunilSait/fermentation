@@ -23,7 +23,7 @@ function initDarkMode() {
 function updateDarkIcons() {
     const isDark = document.documentElement.classList.contains('dark');
     document.querySelectorAll('.dark-toggle i').forEach(icon => {
-        icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        icon.className = isDark ? 'fas fa-sun text-yellow-400' : 'fas fa-moon';
     });
 }
 
@@ -239,16 +239,16 @@ function initCounters() {
 // ---- Mason Jar SVG Logo ----
 function getMasonJarSVG(size = 36) {
     return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="28" y="8" width="44" height="8" rx="2" fill="#B5651D" opacity="0.7"/>
-        <rect x="32" y="4" width="36" height="6" rx="2" fill="#B5651D"/>
-        <rect x="25" y="16" width="50" height="80" rx="8" fill="#B5651D" opacity="0.15" stroke="#B5651D" stroke-width="2.5"/>
-        <rect x="30" y="50" width="40" height="36" rx="3" fill="#B5651D" opacity="0.25"/>
-        <circle cx="42" cy="62" r="4" fill="#6B8F71" opacity="0.6"/>
-        <circle cx="55" cy="58" r="3" fill="#6B8F71" opacity="0.5"/>
-        <circle cx="48" cy="72" r="3.5" fill="#6B8F71" opacity="0.55"/>
-        <circle cx="38" cy="78" r="2.5" fill="#6B8F71" opacity="0.4"/>
-        <circle cx="58" cy="70" r="3" fill="#6B8F71" opacity="0.45"/>
-        <path d="M35 46 Q50 38 65 46" stroke="#B5651D" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <rect x="28" y="8" width="44" height="8" rx="2" fill="var(--logo-primary)" opacity="0.7"/>
+        <rect x="32" y="4" width="36" height="6" rx="2" fill="var(--logo-primary)"/>
+        <rect x="25" y="16" width="50" height="80" rx="8" fill="var(--logo-glass-fill)" stroke="var(--logo-primary)" stroke-width="2.5"/>
+        <rect x="30" y="50" width="40" height="36" rx="3" fill="var(--logo-label-fill)"/>
+        <circle cx="42" cy="62" r="4" fill="var(--logo-liquid-fill)" opacity="0.6"/>
+        <circle cx="55" cy="58" r="3" fill="var(--logo-liquid-fill)" opacity="0.5"/>
+        <circle cx="48" cy="72" r="3.5" fill="var(--logo-liquid-fill)" opacity="0.55"/>
+        <circle cx="38" cy="78" r="2.5" fill="var(--logo-liquid-fill)" opacity="0.4"/>
+        <circle cx="58" cy="70" r="3" fill="var(--logo-liquid-fill)" opacity="0.45"/>
+        <path d="M35 46 Q50 38 65 46" stroke="var(--logo-primary)" stroke-width="1.5" fill="none" opacity="0.5"/>
     </svg>`;
 }
 
