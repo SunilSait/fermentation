@@ -86,7 +86,7 @@
                 const dropdownItems = link.dropdown.map(sub => {
                     const isSubActive = sub.href === currentPage;
                     return `<a href="${sub.href}" class="flex items-center py-3 pl-8 text-sm font-bold transition-all duration-300 ${isSubActive ? 'text-amber-700 dark:text-amber-500 bg-amber-50/30 dark:bg-amber-900/10' : 'text-neutral-600 dark:text-neutral-300 hover:text-amber-700 dark:hover:text-amber-500'}">
-                        <i class="fas ${sub.icon} w-6 text-xs opacity-50 mr-1 rtl:mr-0 rtl:ml-1 text-center"></i> ${sub.label}
+                        ${sub.label}
                     </a>`;
                 }).join('');
 
@@ -94,7 +94,7 @@
                 <div class="mobile-dropdown border-b border-neutral-100 dark:border-neutral-800">
                     <button class="js-mobile-dropdown-btn w-full flex items-center justify-between px-4 py-3.5 text-base font-bold text-neutral-700 dark:text-neutral-200 hover:text-amber-700 dark:hover:text-amber-500 transition-all duration-300 ${isDropdownActive ? 'text-amber-700 dark:text-amber-500 bg-amber-50/50 dark:bg-amber-900/10' : ''}">
                         <span class="flex items-center">
-                            <i class="fas ${link.icon} w-6 text-sm opacity-50 mr-2 rtl:mr-0 rtl:ml-2 text-center"></i> ${link.label}
+                            ${link.label}
                         </span>
                         <i class="fas fa-chevron-down text-sm transition-transform duration-300 opacity-60"></i>
                     </button>
@@ -107,7 +107,7 @@
             const isActive = link.href === currentPage || 
                              (currentPage === '' && link.href === 'index.html');
             return `<a href="${link.href}" class="nav-link flex items-center px-4 py-3.5 text-base font-bold border-b border-neutral-100 dark:border-neutral-800 hover:text-amber-700 dark:hover:text-amber-500 transition-all duration-300 ${isActive ? 'text-amber-700 dark:text-amber-500 bg-amber-50/50 dark:bg-amber-900/10' : 'text-neutral-700 dark:text-neutral-200'}">
-                <i class="fas ${link.icon} w-6 text-sm opacity-50 mr-2 rtl:mr-0 rtl:ml-2 text-center"></i> ${link.label}
+                ${link.label}
             </a>`;
         }).join('');
 
@@ -140,10 +140,7 @@
                             <i class="fas fa-moon text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-amber-700 dark:group-hover:text-amber-500 transition-colors"></i>
                         </button>
 
-                        <!-- Secondary CTA -->
-                        <a href="recipes.html" class="hidden xl:inline-block border border-amber-700 text-amber-700 dark:text-amber-500 dark:border-amber-500 hover:bg-amber-700 hover:text-white dark:hover:bg-amber-600 dark:hover:text-white px-3 py-2 xl:px-4 xl:py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm whitespace-nowrap">
-                            Browse Recipes
-                        </a>
+
 
                         <!-- Enroll CTA -->
                         <a href="signup.html" class="hidden xl:inline-block bg-amber-700 text-white px-3 py-2 xl:px-4 xl:py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-700 shadow-lg shadow-amber-700/20 transition-all active:scale-95 btn-shine whitespace-nowrap">
@@ -159,7 +156,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden xl:hidden bg-amber-50/95 dark:bg-neutral-900 border-b border-amber-100 dark:border-neutral-800 transition-all duration-300 max-h-[85vh] overflow-y-auto">
+            <div id="mobile-menu" class="hidden xl:hidden bg-amber-50/95 dark:bg-neutral-900 border-b border-amber-100 dark:border-neutral-800 transition-all duration-300 max-h-[85vh] overflow-y-auto shadow-2xl" style="position: absolute; top: 100%; left: 0; right: 0; z-index: 100;">
                 <div class="max-w-7xl mx-auto px-4 pt-4 pb-8">
                     <div class="grid grid-cols-1 gap-1 mb-6">
                         ${navLinksMobile}
@@ -176,9 +173,6 @@
                             </button>
                         </div>
                         <div class="flex gap-2 w-full sm:w-auto">
-                            <a href="recipes.html" class="flex-1 sm:flex-none text-center border border-amber-700 text-amber-700 dark:text-amber-500 dark:border-amber-500 hover:bg-amber-700 hover:text-white dark:hover:bg-amber-600 dark:hover:text-white px-5 py-3.5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all">
-                                Browse Recipes
-                            </a>
                             <a href="signup.html" class="flex-1 sm:flex-none text-center bg-amber-700 text-white px-5 py-3.5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-700 shadow-lg transition-all">
                                 Enroll Now
                             </a>

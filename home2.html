@@ -117,7 +117,7 @@
             <div class="grid-3">
                 <div class="card animate-on-scroll slide-left" id="ws-sauerkraut"
                     style="position:relative;overflow:hidden;">
-                    <img src="assets/images/sauerkraut.png" alt="Sauerkraut Workshop" class="card-img shake-hover">
+                    <img src="assets/images/sauerkraut.png" alt="Sauerkraut Workshop" class="card-img zoom-hover">
                     <div style="position:absolute;top:16px;right:16px;">
                         <span class="badge badge-primary" style="background:var(--primary);color:#fff;">$29</span>
                     </div>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="card animate-on-scroll zoom-in delay-100" id="ws-kimchi"
                     style="position:relative;overflow:hidden;">
-                    <img src="assets/images/kimchi.png" alt="Kimchi Workshop" class="card-img shake-hover">
+                    <img src="assets/images/kimchi.png" alt="Kimchi Workshop" class="card-img zoom-hover">
                     <div style="position:absolute;top:16px;right:16px;">
                         <span class="badge badge-primary" style="background:var(--primary);color:#fff;">$39</span>
                     </div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="card animate-on-scroll slide-right delay-200" id="ws-kombucha"
                     style="position:relative;overflow:hidden;">
-                    <img src="assets/images/kombucha.png" alt="Kombucha Workshop" class="card-img shake-hover">
+                    <img src="assets/images/kombucha.png" alt="Kombucha Workshop" class="card-img zoom-hover">
                     <div style="position:absolute;top:16px;right:16px;">
                         <span class="badge badge-primary" style="background:var(--primary);color:#fff;">$49</span>
                     </div>
@@ -338,7 +338,7 @@
                     <div
                         class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-green-500/10 rounded-3xl blur-2xl group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <img src="assets/images/pickles.png" alt="Fermentation Kit and Supplies"
+                    <img src="assets/images/fermentation-kit.png" alt="Artisan Fermentation Kit and Supplies"
                         class="relative rounded-2xl border-4 border-amber-100 dark:border-neutral-800 shadow-2xl hover:scale-[1.02] transition-transform duration-500 max-h-[460px] w-full object-cover">
                     <!-- Premium Sticker Badge -->
                     <div
@@ -349,53 +349,75 @@
                     </div>
                 </div>
                 <!-- Content Side -->
-                <div class="space-y-6">
-                    <span class="section-label">All Supplies Included</span>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-neutral-950 dark:text-amber-100 animate-on-scroll"
-                        style="font-family: 'Playfair Display', serif;">Every Enrollment Includes Our Premium
-                        Fermentation Kit</h2>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                <div style="display:flex; flex-direction:column;">
+                    <h3 class="section-label" style="margin-bottom: 8px;">All Supplies Included</h3>
+                    <h2 class="section-title animate-on-scroll" style="margin-bottom: 16px;">Every Enrollment Includes Our Premium Fermentation Kit</h2>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed" style="margin-bottom: 24px;">
                         No need to hunt for specialized equipment. We furnish you with the ultimate physical pickling
                         toolkit—shipped directly to your door before online class, or ready at your station in-person.
                     </p>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>1L Mason Jar:</strong> Heavy duty, food-grade glass designed for heavy
-                                fermentation gas pressure.</span>
-                        </li>
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>Glass Weights:</strong> Keeps all chopped vegetables submerged safely beneath
-                                the anaerobic brine.</span>
-                        </li>
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>Silicon Airlocks:</strong> Standard pressure airlock lids that release CO₂
-                                automatically.</span>
-                        </li>
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>pH Indicator Strips:</strong> Easily track lactic acid shield progress below
-                                pH 4.6.</span>
-                        </li>
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>Celtic Sea Salt:</strong> Raw, hand-harvested organic mineral salts essential
-                                for brine creation.</span>
-                        </li>
-                        <li class="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300">
-                            <i
-                                class="fa-solid fa-circle-check text-green-600 dark:text-green-500 mt-1 flex-shrink-0"></i>
-                            <span><strong>Recipe Notebook:</strong> Log pH tracking, ambient room temps, and personal
-                                spice changes.</span>
-                        </li>
-                    </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                        <!-- Card 1 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-amber-100 dark:bg-amber-900/20 text-amber-700 dark:text-amber-500">
+                                <i class="fa-solid fa-jar"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>1L Mason Jar</h4>
+                                <p>Heavy duty food-grade glass built for active gas pressure.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-500">
+                                <i class="fa-solid fa-weight-hanging"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>Glass Weights</h4>
+                                <p>Keeps chopped vegetables submerged beneath anaerobic brine.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-sky-100 dark:bg-sky-900/20 text-sky-700 dark:text-sky-500">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>Silicon Airlocks</h4>
+                                <p>Standard pressure airlock lids that release CO₂ automatically.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-500">
+                                <i class="fa-solid fa-vial"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>pH Indicator Strips</h4>
+                                <p>Easily track active lactic acid shield progress below pH 4.6.</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-500">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>Celtic Sea Salt</h4>
+                                <p>Raw, hand-harvested organic salts perfect for brine creation.</p>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="kit-item-card group">
+                            <div class="kit-icon-wrapper bg-teal-100 dark:bg-teal-900/20 text-teal-700 dark:text-teal-500">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div class="kit-card-content">
+                                <h4>Recipe Notebook</h4>
+                                <p>Log pH readings, room temperatures, and custom spices.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
