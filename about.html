@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about the history of Pickling Supply Co. — our journey from a homestead kitchen to a thriving global fermentation community.">
+    <title>Our Story | Pickling Supply Co.</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%23B5651D' stroke-width='1.5' stroke-opacity='0.25' fill='none'/%3E%3Ccircle cx='50' cy='50' r='42' stroke='%23B5651D' stroke-width='0.75' stroke-dasharray='3 3' stroke-opacity='0.4' fill='none'/%3E%3Cpath d='M38 18h24v4H38z' fill='%23B5651D' rx='1'/%3E%3Cpath d='M35 22h30v5a2 2 0 0 1-2 2H37a2 2 0 0 1-2-2v-5z' fill='%23B5651D'/%3E%3Cline x1='40' y1='24' x2='40' y2='28' stroke='%23FAF6F0' stroke-width='0.75' opacity='0.6'/%3E%3Cline x1='45' y1='24' x2='45' y2='28' stroke='%23FAF6F0' stroke-width='0.75' opacity='0.6'/%3E%3Cline x1='50' y1='24' x2='50' y2='28' stroke='%23FAF6F0' stroke-width='0.75' opacity='0.6'/%3E%3Cline x1='55' y1='24' x2='55' y2='28' stroke='%23FAF6F0' stroke-width='0.75' opacity='0.6'/%3E%3Cline x1='60' y1='24' x2='60' y2='28' stroke='%23FAF6F0' stroke-width='0.75' opacity='0.6'/%3E%3Cpath d='M35 29 C 32 35, 26 38, 26 48 L 26 84 C 26 89, 30 92, 36 92 L 64 92 C 70 92, 74 89, 74 84 L 74 48 C 74 38, 68 35, 65 29 Z' fill='%23B5651D' fill-opacity='0.12' stroke='%23B5651D' stroke-width='2.5' stroke-linejoin='round'/%3E%3Cpath d='M30 46 L 30 82' stroke='%23FAF6F0' stroke-width='1.5' stroke-linecap='round' opacity='0.3'/%3E%3Cline x1='64' y1='46' x2='70' y2='46' stroke='%23B5651D' stroke-width='1.5' opacity='0.5' stroke-linecap='round'/%3E%3Cline x1='66' y1='54' x2='70' y2='54' stroke='%23B5651D' stroke-width='1.2' opacity='0.5' stroke-linecap='round'/%3E%3Cline x1='64' y1='62' x2='70' y2='62' stroke='%23B5651D' stroke-width='1.5' opacity='0.5' stroke-linecap='round'/%3E%3Cline x1='66' y1='70' x2='70' y2='70' stroke='%23B5651D' stroke-width='1.2' opacity='0.5' stroke-linecap='round'/%3E%3Cline x1='64' y1='78' x2='70' y2='78' stroke='%23B5651D' stroke-width='1.5' opacity='0.5' stroke-linecap='round'/%3E%3Crect x='29' y='38' width='42' height='6' rx='2' fill='%23B5651D' opacity='0.12'/%3E%3Crect x='29' y='38' width='42' height='6' rx='2' fill='none' stroke='%23B5651D' stroke-width='1' stroke-dasharray='2 2' opacity='0.5'/%3E%3Crect x='36' y='54' width='28' height='20' rx='3' fill='%23FAF6F0' stroke='%23B5651D' stroke-width='1.2' opacity='0.9'/%3E%3Cpath d='M 50 60 L 51.5 63.5 L 55 63.5 L 52 65.5 L 53.5 69 L 50 67 L 46.5 69 L 48 65.5 L 45 63.5 L 48.5 63.5 Z' fill='%23B5651D' opacity='0.8'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#B5651D', secondary: '#3B4A3A' } } }
+        }
+    </script>
+    <!-- Shared Components Script -->
+    <script src="components.js" defer></script>
+</head>
+
+<body class="bg-amber-50/20 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+
+    <!-- Shared Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- About Page Hero -->
+    <section class="relative py-28 text-center text-white overflow-hidden bg-cover bg-center" 
+             style="background-image: linear-gradient(rgba(59, 74, 58, 0.85), var(--secondary-dark)), url('assets/images/cta-background.png');">
+        <div class="container relative z-10">
+            <nav style="font-size:0.85rem;margin-bottom:16px;color:rgba(255,255,255,0.6);">
+                <a href="index.html" style="color:rgba(255,255,255,0.6);">Home</a> / <span style="color:var(--primary-light);">Our Story</span>
+            </nav>
+            <h1 class="text-4xl md:text-5xl font-bold font-serif mb-4" style="color:#fff;">Crafting Tradition, Nurturing Wellness</h1>
+            <p class="text-neutral-300 max-w-xl mx-auto text-base">The history of Pickling Supply Co. — from a small farmhouse homestead to a global family of kitchen artisans.</p>
+        </div>
+    </section>
+
+    <!-- History Timeline Section -->
+    <section class="section" id="about-history" style="background: var(--warm-white);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Journey</span>
+                <h2>How We Cultivated Our History</h2>
+                <p>Fermentation is about patience and slow development. So is our history. Explore the key milestones of our craft.</p>
+            </div>
+
+            <!-- Vertical Alternate Timeline Container -->
+            <div class="relative max-w-4xl mx-auto mt-16 px-4">
+                <!-- Center Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-amber-200 dark:bg-neutral-800 hidden md:block"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between mb-12 relative animate-on-scroll slide-left">
+                    <div class="w-full md:w-[45%] md:text-right md:pr-8 mb-4 md:mb-0">
+                        <div class="glass-timeline-card">
+                            <span class="timeline-year text-amber-700 dark:text-amber-500 font-black text-xl">2014</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">The Farmhouse Spark</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">Founder Sarah Jenkins began teaching traditional sourdough and cabbage lacto-fermentation workshops right out of her farmhouse kitchen homestead, sharing sourdough starter cultures with eager neighbors.</p>
+                        </div>
+                    </div>
+                    <!-- Year Node -->
+                    <div class="timeline-node z-10 w-10 h-10 rounded-full bg-amber-700 dark:bg-amber-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center text-white text-xs font-bold shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                        <i class="fa-solid fa-home text-[10px]"></i>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between mb-12 relative animate-on-scroll slide-right">
+                    <div class="w-full md:w-[45%] md:text-left md:pl-8 mb-4 md:mb-0">
+                        <div class="glass-timeline-card">
+                            <span class="timeline-year text-emerald-700 dark:text-emerald-500 font-black text-xl">2017</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">Artisan Workshop Launch</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">Local classes rapidly expanded into our first dedicated physical classroom. We developed structured curriculum modules for authentic Kimchi, Sauerkraut, and SCOBY kombucha care.</p>
+                        </div>
+                    </div>
+                    <!-- Year Node -->
+                    <div class="timeline-node z-10 w-10 h-10 rounded-full bg-emerald-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center text-white text-xs font-bold shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                        <i class="fa-solid fa-chalkboard-user text-[10px]"></i>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between mb-12 relative animate-on-scroll slide-left">
+                    <div class="w-full md:w-[45%] md:text-right md:pr-8 mb-4 md:mb-0">
+                        <div class="glass-timeline-card">
+                            <span class="timeline-year text-sky-700 dark:text-sky-500 font-black text-xl">2020</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">Going Global & Digital</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">Responding to global shutdowns, we launched live virtual broadcasts and packaged physical Fermentation Supply Kits to ship starter cultures safely to kitchens around the world.</p>
+                        </div>
+                    </div>
+                    <!-- Year Node -->
+                    <div class="timeline-node z-10 w-10 h-10 rounded-full bg-sky-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center text-white text-xs font-bold shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                        <i class="fa-solid fa-globe text-[10px]"></i>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between mb-12 relative animate-on-scroll slide-right">
+                    <div class="w-full md:w-[45%] md:text-left md:pl-8 mb-4 md:mb-0">
+                        <div class="glass-timeline-card">
+                            <span class="timeline-year text-purple-700 dark:text-purple-500 font-black text-xl">2023</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">Storefront & Curated Supplies</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">Opened our physical storefront and curated online supply catalog, sourcing premium non-iodized Celtic sea salts, hand-blown weight stones, glass containers, and airlock lids.</p>
+                        </div>
+                    </div>
+                    <!-- Year Node -->
+                    <div class="timeline-node z-10 w-10 h-10 rounded-full bg-purple-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center text-white text-xs font-bold shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                        <i class="fa-solid fa-store text-[10px]"></i>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative animate-on-scroll slide-left">
+                    <div class="w-full md:w-[45%] md:text-right md:pr-8 mb-4 md:mb-0">
+                        <div class="glass-timeline-card">
+                            <span class="timeline-year text-amber-700 dark:text-amber-500 font-black text-xl">Present Day</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">5,000+ Graduated Fermenters</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">Today, we support a massive global family of fermenters logging pH levels, sharing recipes, and pickling together to foster healthy, probiotic-rich kitchen lifestyles.</p>
+                        </div>
+                    </div>
+                    <!-- Year Node -->
+                    <div class="timeline-node z-10 w-10 h-10 rounded-full bg-amber-700 dark:bg-amber-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center text-white text-xs font-bold shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                        <i class="fa-solid fa-graduation-cap text-[10px]"></i>
+                    </div>
+                    <div class="w-full md:w-[45%] hidden md:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Philosophy Section -->
+    <section class="section" id="about-philosophy">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Philosophy</span>
+                <h2>Clean Ingredients, Ancient Biology</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card animate-on-scroll slide-left" style="background:var(--warm-white);padding:32px;">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-xl text-lg mb-6" 
+                         style="background:rgba(181,101,29,0.1);color:var(--primary);">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Artisanal Integrity</h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">We source organic ingredients, heirloom mother cultures, and hand-harvested minerals to ensure that your fermenting projects contain only pure, uncompromised, and healthy elements.</p>
+                </div>
+                <div class="card animate-on-scroll zoom-in delay-100" style="background:var(--warm-white);padding:32px;">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-xl text-lg mb-6" 
+                         style="background:rgba(107,143,113,0.12);color:var(--success);">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Scientific Precision</h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">Fermentation is a living science. We teach pH-level tracking, temperature management, and strict anaerobic practices so that your ferments remain safe, active, and delicious.</p>
+                </div>
+                <div class="card animate-on-scroll slide-right delay-200" style="background:var(--warm-white);padding:32px;">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-xl text-lg mb-6" 
+                         style="background:rgba(212,160,23,0.12);color:var(--warning);">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Community Centered</h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">We partner with local farms, share student-contributed recipes, and foster open forums. We believe pickling is an ancient tradition best experienced when shared.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Spotlight Section -->
+    <section class="section" id="about-team" style="background: var(--cream-dark); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Team</span>
+                <h2>Meet the Culture Keepers</h2>
+                <p>The educators, bakers, and microbiologists helping you master the art of pickling.</p>
+            </div>
+            <div class="grid-3" style="margin-top:40px;">
+                <!-- Team Member 1 -->
+                <div class="card animate-on-scroll slide-left" style="background:var(--warm-white);text-align:center;padding:32px; display:flex; flex-direction:column; height:100%;">
+                    <img src="assets/images/avatar-sarah.png" alt="Sarah Jenkins" style="width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);flex-shrink:0;">
+                    <h3 style="font-size:1.2rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Sarah Jenkins</h3>
+                    <span style="font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px;">Founder & Master Fermenter</span>
+                    <p style="font-size:0.85rem;margin-top:auto;padding-top:16px;color:var(--text-dark);line-height:1.6;">Sarah started this journey in 2014, sharing kraut jars with local markets. She teaches sauerkraut and kimchi masterclasses.</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="card animate-on-scroll zoom-in delay-100" style="background:var(--warm-white);text-align:center;padding:32px; display:flex; flex-direction:column; height:100%;">
+                    <img src="assets/images/avatar-marcus.png" alt="Robert Vance" style="width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);flex-shrink:0;">
+                    <h3 style="font-size:1.2rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Robert Vance</h3>
+                    <span style="font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px;">Lead Sourdough Baker</span>
+                    <p style="font-size:0.85rem;margin-top:auto;padding-top:16px;color:var(--text-dark);line-height:1.6;">A master artisan with 15+ years of wild yeast baking. Robert directs our sourdough classes and live broadcasts.</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="card animate-on-scroll slide-right delay-200" style="background:var(--warm-white);text-align:center;padding:32px; display:flex; flex-direction:column; height:100%;">
+                    <img src="assets/images/avatar-elena.png" alt="Elena Petrova" style="width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);flex-shrink:0;">
+                    <h3 style="font-size:1.2rem;margin-bottom:4px;font-family:'Playfair Display',serif;">Elena Petrova</h3>
+                    <span style="font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px;">Culture Microbiologist</span>
+                    <p style="font-size:0.85rem;margin-top:auto;padding-top:16px;color:var(--text-dark);line-height:1.6;">Elena monitors culture vitality and ensures our organic starter packs meet high-quality lab standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer Container -->
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+    <style>
+        /* About Timeline specific styles */
+        .glass-timeline-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(181, 101, 29, 0.03);
+            transition: var(--transition);
+        }
+        .dark .glass-timeline-card {
+            background: rgba(26, 26, 26, 0.78);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .glass-timeline-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(181, 101, 29, 0.07);
+            border-color: rgba(181, 101, 29, 0.25);
+        }
+        .dark .glass-timeline-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            border-color: rgba(181, 101, 29, 0.2);
+        }
+
+        /* Mobile stacked nodes */
+        @media (max-width: 768px) {
+            .timeline-node {
+                display: none !important;
+            }
+            .timeline-item {
+                align-items: stretch !important;
+                margin-bottom: 24px !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

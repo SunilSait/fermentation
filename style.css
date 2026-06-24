@@ -1,5 +1,5 @@
 /* ============================================
-   Fermentation Workshop & Pickling Supply Co.
+   Pickling Supply Co.
    Global Styles
    ============================================ */
 
@@ -551,6 +551,20 @@ input, textarea, select, button {
     max-width: 680px;
 }
 
+#hero-section .hero-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#hero-section .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero-section .hero-btns {
+    justify-content: center;
+}
+
 .hero h1 {
     font-size: 3.4rem;
     color: #fff;
@@ -574,12 +588,12 @@ input, textarea, select, button {
     animation: fadeSlideUp 0.8s ease-out 0.3s both;
 }
 
-.hero-btns .btn-secondary {
+#hero-section .hero-btns .btn-secondary {
     color: #fff;
     border-color: rgba(255,255,255,0.5);
 }
 
-.hero-btns .btn-secondary:hover {
+#hero-section .hero-btns .btn-secondary:hover {
     background: #fff;
     color: var(--secondary);
     border-color: #fff;
@@ -1367,38 +1381,38 @@ input, textarea, select, button {
     left: 50%;
 }
 
-.timeline-item {
+.timeline .timeline-item {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
     position: relative;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline .timeline-item:nth-child(odd) {
     flex-direction: row;
     padding-right: calc(50% + 40px);
     text-align: right;
 }
 
-[dir="rtl"] .timeline-item:nth-child(odd) {
+[dir="rtl"] .timeline .timeline-item:nth-child(odd) {
     padding-right: 0;
     padding-left: calc(50% + 40px);
     text-align: left;
 }
 
-.timeline-item:nth-child(even) {
+.timeline .timeline-item:nth-child(even) {
     flex-direction: row-reverse;
     padding-left: calc(50% + 40px);
     text-align: left;
 }
 
-[dir="rtl"] .timeline-item:nth-child(even) {
+[dir="rtl"] .timeline .timeline-item:nth-child(even) {
     padding-left: 0;
     padding-right: calc(50% + 40px);
     text-align: right;
 }
 
-.timeline-dot {
+.timeline .timeline-dot {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -1410,12 +1424,12 @@ input, textarea, select, button {
     z-index: 2;
 }
 
-.timeline-content h3 {
+.timeline .timeline-content h3 {
     font-size: 1.15rem;
     margin-bottom: 6px;
 }
 
-.timeline-content p {
+.timeline .timeline-content p {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
@@ -1730,23 +1744,23 @@ input, textarea, select, button {
 
     .timeline::before { left: 20px; }
     [dir="rtl"] .timeline::before { left: auto; right: 20px; }
-    .timeline-item,
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
+    .timeline .timeline-item,
+    .timeline .timeline-item:nth-child(odd),
+    .timeline .timeline-item:nth-child(even) {
         flex-direction: row;
         padding-left: 56px;
         padding-right: 0;
         text-align: left;
     }
-    [dir="rtl"] .timeline-item,
-    [dir="rtl"] .timeline-item:nth-child(odd),
-    [dir="rtl"] .timeline-item:nth-child(even) {
+    [dir="rtl"] .timeline .timeline-item,
+    [dir="rtl"] .timeline .timeline-item:nth-child(odd),
+    [dir="rtl"] .timeline .timeline-item:nth-child(even) {
         padding-left: 0;
         padding-right: 56px;
         text-align: right;
     }
-    .timeline-dot { left: 20px; }
-    [dir="rtl"] .timeline-dot { left: auto; right: 20px; transform: translateX(50%); }
+    .timeline .timeline-dot { left: 20px; }
+    [dir="rtl"] .timeline .timeline-dot { left: auto; right: 20px; transform: translateX(50%); }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1990,4 +2004,22 @@ input, textarea, select, button {
     color: rgba(255, 255, 255, 0.8) !important;
     border-top: 1px dashed rgba(255, 255, 255, 0.15) !important;
 }
+
+/* ---- Floating Cart Badge Pop Animation & Styling ---- */
+.cart-badge-pop {
+    animation: cart-badge-bounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes cart-badge-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 

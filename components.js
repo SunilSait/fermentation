@@ -5,11 +5,11 @@
     'use strict';
 
     // --- Configuration ---
-    const BRAND_NAME = 'Ferment & Pickle';
-    const BRAND_TAGLINE = 'Artisan Fermentation & Pickling Workshops';
+    const BRAND_NAME = 'Pickling Supply Co.';
+    const BRAND_TAGLINE = 'Artisan Fermentation & Pickling Supplies';
     const CURRENT_YEAR = new Date().getFullYear();
     const PHONE = '+1 (555) 284-7392';
-    const EMAIL = 'hello@fermentpickle.co';
+    const EMAIL = 'hello@picklingsupply.co';
     const ADDRESS = '42 Harvest Lane, Farmville';
 
     const NAV_LINKS = [
@@ -17,7 +17,9 @@
         { label: 'Home 2', href: 'home2.html', icon: 'fa-door-open' },
         { label: 'Workshops', href: 'workshops.html', icon: 'fa-chalkboard-user' },
         { label: 'Recipes', href: 'recipes.html', icon: 'fa-book-open' },
+        { label: 'Store', href: 'store.html', icon: 'fa-store' },
         { label: 'Pricing', href: 'pricing.html', icon: 'fa-tags' },
+        { label: 'About', href: 'about.html', icon: 'fa-circle-info' },
         { label: 'Contact', href: 'contact.html', icon: 'fa-envelope' },
         { label: 'Dashboard', href: '#', icon: 'fa-gauge', dropdown: [
             { label: 'Student Dashboard', href: 'student-dashboard.html', icon: 'fa-user-graduate' },
@@ -32,17 +34,55 @@
         { icon: 'fab fa-pinterest-p', href: '#', hoverColor: 'hover:text-red-700 dark:hover:text-red-500', label: 'Pinterest' }
     ];
 
-    const MASON_JAR_SVG = `<svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-500 group-hover:rotate-12">
-        <rect x="28" y="8" width="44" height="8" rx="2" fill="var(--logo-primary)" opacity="0.7"/>
-        <rect x="32" y="4" width="36" height="6" rx="2" fill="var(--logo-primary)"/>
-        <rect x="25" y="16" width="50" height="80" rx="8" fill="var(--logo-glass-fill)" stroke="var(--logo-primary)" stroke-width="2.5"/>
-        <rect x="30" y="50" width="40" height="36" rx="3" fill="var(--logo-label-fill)"/>
-        <circle cx="42" cy="62" r="4" fill="var(--logo-liquid-fill)" opacity="0.6"/>
-        <circle cx="55" cy="58" r="3" fill="var(--logo-liquid-fill)" opacity="0.5"/>
-        <circle cx="48" cy="72" r="3.5" fill="var(--logo-liquid-fill)" opacity="0.55"/>
-        <circle cx="38" cy="78" r="2.5" fill="var(--logo-liquid-fill)" opacity="0.4"/>
-        <circle cx="58" cy="70" r="3" fill="var(--logo-liquid-fill)" opacity="0.45"/>
-        <path d="M35 46 Q50 38 65 46" stroke="var(--logo-primary)" stroke-width="1.5" fill="none" opacity="0.5"/>
+    const MASON_JAR_SVG = `<svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-500 group-hover:scale-105">
+        <defs>
+            <linearGradient id="jarGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--logo-primary)" stop-opacity="0.02"/>
+                <stop offset="100%" stop-color="var(--logo-primary)" stop-opacity="0.12"/>
+            </linearGradient>
+            <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--logo-primary)"/>
+                <stop offset="50%" stop-color="var(--primary-light, #D4883E)"/>
+                <stop offset="100%" stop-color="var(--logo-primary)"/>
+            </linearGradient>
+        </defs>
+        
+        <!-- Decorative circular stamp details -->
+        <circle cx="50" cy="50" r="46" stroke="var(--logo-primary)" stroke-width="1.5" stroke-opacity="0.25" fill="none"/>
+        <circle cx="50" cy="50" r="42" stroke="var(--logo-primary)" stroke-width="0.75" stroke-dasharray="3 3" stroke-opacity="0.4" fill="none"/>
+        
+        <!-- Mason Jar Lid with professional threading details -->
+        <path d="M38 18h24v4H38z" fill="url(#lidGrad)" rx="1"/>
+        <path d="M35 22h30v5a2 2 0 0 1-2 2H37a2 2 0 0 1-2-2v-5z" fill="url(#lidGrad)"/>
+        
+        <line x1="40" y1="24" x2="40" y2="28" stroke="var(--cream, #FAF6F0)" stroke-width="0.75" opacity="0.6"/>
+        <line x1="45" y1="24" x2="45" y2="28" stroke="var(--cream, #FAF6F0)" stroke-width="0.75" opacity="0.6"/>
+        <line x1="50" y1="24" x2="50" y2="28" stroke="var(--cream, #FAF6F0)" stroke-width="0.75" opacity="0.6"/>
+        <line x1="55" y1="24" x2="55" y2="28" stroke="var(--cream, #FAF6F0)" stroke-width="0.75" opacity="0.6"/>
+        <line x1="60" y1="24" x2="60" y2="28" stroke="var(--cream, #FAF6F0)" stroke-width="0.75" opacity="0.6"/>
+
+        <!-- Mason Jar Glass Body -->
+        <path d="M 35 29 C 32 35, 26 38, 26 48 L 26 84 C 26 89, 30 92, 36 92 L 64 92 C 70 92, 74 89, 74 84 L 74 48 C 74 38, 68 35, 65 29 Z" 
+              fill="url(#jarGlassGrad)" stroke="var(--logo-primary)" stroke-width="2.5" stroke-linejoin="round"/>
+        
+        <!-- Glass reflections / glare -->
+        <path d="M 30 46 L 30 82" stroke="var(--cream, #FAF6F0)" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        
+        <!-- Measurement tick marks (representing capacity and supply scale) -->
+        <line x1="64" y1="46" x2="70" y2="46" stroke="var(--logo-primary)" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <line x1="66" y1="54" x2="70" y2="54" stroke="var(--logo-primary)" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+        <line x1="64" y1="62" x2="70" y2="62" stroke="var(--logo-primary)" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <line x1="66" y1="70" x2="70" y2="70" stroke="var(--logo-primary)" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+        <line x1="64" y1="78" x2="70" y2="78" stroke="var(--logo-primary)" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+
+        <!-- Glass Weight sitting inside the jar -->
+        <rect x="29" y="38" width="42" height="6" rx="2" fill="var(--logo-primary)" opacity="0.12"/>
+        <rect x="29" y="38" width="42" height="6" rx="2" fill="none" stroke="var(--logo-primary)" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+
+        <!-- Center supply company label/shield -->
+        <rect x="36" y="54" width="28" height="20" rx="3" fill="var(--cream, #FAF6F0)" stroke="var(--logo-primary)" stroke-width="1.2" opacity="0.9"/>
+        <!-- Elegant minimal star in the label center -->
+        <path d="M 50 60 L 51.5 63.5 L 55 63.5 L 52 65.5 L 53.5 69 L 50 67 L 46.5 69 L 48 65.5 L 45 63.5 L 48.5 63.5 Z" fill="var(--logo-primary)" opacity="0.8"/>
     </svg>`;
 
     // --- Get current page filename ---
@@ -218,7 +258,9 @@
                             <li><a href="home2.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">Home 2 (Premium)</a></li>
                             <li><a href="workshops.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">Workshops</a></li>
                             <li><a href="recipes.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">Recipe Library</a></li>
+                            <li><a href="store.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">Pickling Supply Store</a></li>
                             <li><a href="pricing.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">Pricing Plans</a></li>
+                            <li><a href="about.html" class="hover:text-amber-700 dark:hover:text-amber-500 hover:pl-2 transition-all duration-200 block">About Us</a></li>
                         </ul>
                     </div>
 
