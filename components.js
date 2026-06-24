@@ -5,7 +5,7 @@
     'use strict';
 
     // --- Configuration ---
-    const BRAND_NAME = 'Pickling Supply Co.';
+    const BRAND_NAME = 'Jarcraft';
     const BRAND_TAGLINE = 'Artisan Fermentation & Pickling Supplies';
     const CURRENT_YEAR = new Date().getFullYear();
     const PHONE = '+1 (555) 284-7392';
